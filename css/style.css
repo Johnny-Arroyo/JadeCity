@@ -1,0 +1,482 @@
+:root {
+    --primary: #32696d;
+    --secondary: #14242a;
+    --tertiary: #79cdcc;
+    --font-color: #fcf8f1;
+    --hover-color: #ba9cf5;
+    --font-size: 1.3rem;
+    --primary-font: 'Belleza', sans-serif;
+    --secondary-font: 'Montserrat', sans-serif;
+    --tertiary-font: 'Lily Script One', system-ui;
+}
+
+.belleza-regular {
+    font-family: 'Belleza', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+/* generic styles for the page */
+body {
+    padding: 0;
+    margin: 0;
+    font-family: var(--primary-font);
+    background-image: url('../img/JC-bg.png');
+    /* height: 100%; */
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center 10%;
+    background-repeat: no-repeat;
+    color: var(--font-color);
+    font-size: var(--font-size);
+}
+
+h1,
+h2,
+h3,
+h4 {
+    margin: 0;
+}
+
+img {
+    width: 100%;
+}
+
+a {
+    color: var(--primary);
+}
+
+a:hover {
+    color: var(--hover-color);
+    text-decoration: none;
+}
+
+/*background color divs */
+.section-plum {
+    background-color: var(--primary);
+}
+
+.section-dkblue {
+    background-color: var(--secondary);
+}
+
+.gradient {
+    background: linear-gradient(
+        90deg,
+        var(--hover-color) 0%,
+        var(--tertiary) 100%
+    );
+    height: 2px;
+}
+
+/* intro styles */
+#about {
+    padding: 0rem 1rem 18rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: auto;
+    height: auto;
+    color: var(--secondary);
+}
+
+#about p {
+    font-size: 1rem;
+    line-height: 1.5;
+    font-family: var(--secondary-font);
+}
+
+#about .welcome {
+    font-family: var(--tertiary-font);
+    font-size: 4rem;
+}
+
+#about .records {
+    font-family: var(--primary-font);
+    font-size: 6rem;
+    margin-left: 1rem;
+    color: var(--aqua);
+    display: block;
+    font-weight: 700;
+}
+
+#about h2 {
+    font-size: 3rem;
+    font-family: var(--secondary-font);
+}
+
+/* artists */
+#artists {
+    padding: 4rem 1rem;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+#artists h2 {
+    font-size: 2.5rem;
+    margin-bottom: calc(2.5rem * 1.5);
+}
+
+#artists h3 {
+    color: var(--font-color);
+}
+
+#artists h4 {
+    font-size: 1rem;
+    font-family: var(--secondary-font);
+}
+
+.bio-box {
+    border: 1px solid var(--secondary);
+    background-color: var(--tertiary);
+    padding: 1rem;
+    border-radius: 10px;
+    color: var(--font-color);
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+#artists ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    gap: 1rem;
+    font-size: 1rem;
+}
+
+#artists img {
+    border-left: 1px solid var(--secondary);
+    border-top: 1px solid var(--secondary);
+    border-radius: 15px;
+    padding: 1rem;
+    margin: 2rem 0 4rem 0;
+}
+
+.tech-used,
+.artist-bio {
+    padding: 0 1rem 0 0;
+}
+
+.alt-layout .artist-bio, .alt-layout .tech-used {
+    padding: 0 0 0 1rem;
+}
+
+/* contact section */
+fieldset {
+  border: none;     /* Removes the default border */
+  padding: 0 0 1rem 0;       /* Removes any padding */
+  font-size: 1em;   /* You can adjust this to your needs */
+}
+
+#contact {
+    max-width: auto;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0;
+    background-color: var(--secondary);
+    font-family: var(--primary-font);
+}
+
+#contactHeading {
+    margin: 0;
+    padding: 1rem 0 1rem 0;
+}
+
+#contact p {
+    font-size: 1rem;
+    margin: 0;
+    padding: 0;
+}
+
+#file {
+  opacity: 0;               /* Makes the input invisible */
+  position: absolute;        /* Removes the input from the normal flow */
+  z-index: -1;               /* Ensures the input is not clickable */
+}
+
+/* Custom button style */
+.custom-file-upload {
+  display: inline-block;      /* Makes the label behave like a button */
+  padding: 10px 20px;
+  margin: .5rem;         /* Adds padding to the button */
+  background-color: #008CBA;  /* Button background color */
+  color: white;               /* Text color */
+  border: none;               /* Removes the default border */
+  border-radius: 4px;         /* Rounds the corners of the button */
+  cursor: pointer;            /* Changes the mouse cursor to a pointer when hovering */
+}
+
+/* Optional: hover effect for the button */
+.custom-file-upload:hover {
+  background-color: #005f73;  /* Darkens the button color on hover */
+}
+
+.additionalInfo {
+  display: flex;
+  flex-wrap: row wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+/* navbar */
+.nav-background {
+    background-color: var(--secondary);
+}
+
+nav {
+    font-family: var(--primary-font);
+    font-size: 90%;
+    padding: 0.25rem;
+}
+
+nav h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    font-size: 60%;
+}
+
+nav h1 a {
+    font-family: var(--primary-font);
+    font-weight: 400;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+nav img {
+    width: 75px;
+}
+
+nav li:first-child {
+    flex-basis: 100%;
+    text-align: center;
+}
+
+nav [class*='fa-'] {
+    font-size: 150%;
+    color: var(--primary-font);
+    transition: 0.3s;
+}
+
+nav a:hover,
+nav [class*='fa-']:hover {
+    color: var(--hover-color);
+}
+
+nav h1 [class*='fa-'] {
+    font-size: 100%;
+    color: var(--font-color);
+    transition: 0.3s;
+}
+
+nav a {
+    color: var(--font-color);
+    text-decoration: none;
+    display: block;
+}
+
+.submit {
+    background-color: var(--tertiary);
+    color: var(--secondary);
+    padding: 0.5rem;
+    margin: 1rem;
+    border-radius: 0.5rem;
+    transition: 0.3s;
+    font-family: var(--secondary-font);
+    text-decoration: none;
+    transition: 0.2s ease;
+}
+
+.submit:hover {
+    color: var(--font-color);
+    background-color: var(--hover-color);
+    box-shadow: 0 0 25px rgba(255, 23, 228, 0.5);
+}
+
+/* footer section */
+footer {
+    text-align: center;
+    padding: 4rem 0;
+}
+
+footer ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 2rem 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 2rem;
+    font-size: 2rem;
+}
+
+@media (min-width: 480px) {
+    nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+        padding: 0 1rem 0 0;
+        margin: 0;
+        list-style-type: none;
+        width: 100%;
+        gap: 2rem;
+    }
+
+    nav ul li:nth-child(7),
+    nav ul li:nth-child(8),
+    nav ul li:nth-child(9) {
+        font-size: 60%;
+        text-align: center;
+        justify-content: center;
+    }
+
+    article {
+        display: grid;
+        grid-template-columns: repeat(10, 1fr);
+        gap: 1rem;
+    }
+
+    .text {
+        order: 2;
+        grid-column: 5/11;
+        grid-row: 1/2;
+        text-align: right;
+    }
+
+    #artists img {
+        grid-column: 1/6;
+        grid-row: 1/2;
+    }
+
+    #artists ul {
+        justify-content: flex-end;
+    }
+
+    #artists .alt-layout .text {
+        grid-column: 1/7;
+        order: 2;
+        text-align: left;
+    }
+
+    #artists .alt-layout img {
+        grid-column: 6/11;
+        grid-row: 1/2;
+    }
+
+    #artists .alt-layout ul {
+        justify-content: flex-start;
+    }
+}
+
+@media (min-width: 850px) {
+    nav {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    nav ul {
+        gap: 2rem;
+    }
+
+    nav li:first-child {
+        flex-basis: auto;
+        text-align: left;
+        margin-right: auto;
+    }
+
+    nav ul li:nth-child(2),
+    nav ul li:nth-child(3),
+    nav ul li:nth-child(4),
+    nav ul li:nth-child(5),
+    nav ul li:nth-child(6) {
+        text-align: center;
+        flex: 0;
+    }
+
+    nav li:nth-last-child(3) {
+        margin-left: auto;
+    }
+}
+/* Mobile */
+@media (max-width: 480px) {
+    #artists .alt-layout img {
+        width: 50%;
+    }
+    #artists img {
+        width: 50%;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+        width: 100%;
+    }
+
+    nav ul li:first-child {
+        flex-basis: 100%;
+        text-align: center;
+        margin: 0;
+        align-self: center;
+    }
+
+    nav ul li:nth-child(2),
+    nav ul li:nth-child(3),
+    nav ul li:nth-child(4),
+    nav ul li:nth-child(5),
+    nav ul li:nth-child(6) {
+        flex: 1 1 20%;
+        text-align: center;
+        margin: 0 0 1rem 0;
+        padding: 0;
+    }
+
+    nav ul li:nth-child(7),
+    nav ul li:nth-child(8),
+    nav ul li:nth-child(9) {
+        font-size: 60%;
+        flex-basis: calc(100% / 3);
+        text-align: center;
+        justify-content: center;
+        margin: 0 0 0.5rem 0;
+    }
+}
