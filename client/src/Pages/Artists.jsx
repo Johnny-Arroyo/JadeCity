@@ -14,7 +14,7 @@ const ArtistSection = () => {
                             <h4>Featured Artist</h4>
                             <h3>Wall of Wonder</h3>
                         </div>
-                        <p className="black-box">
+                        <p className="bio-box">
                             Description of the project. This should be
                             fairly concise while also describing the
                             key components that you developed or

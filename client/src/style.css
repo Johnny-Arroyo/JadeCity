@@ -93,6 +93,7 @@ a:hover {
     font-size: 1rem;
     line-height: 1.5;
     font-family: var(--secondary-font);
+    text-align: justify;
 }
 
 #about .welcome {
@@ -238,7 +239,7 @@ fieldset {
 
 nav {
     font-family: var(--primary-font);
-    font-size: 90%;
+    font-size: 100%;
     padding: 0.25rem;
 }
 
@@ -280,18 +281,18 @@ nav li:first-child {
     text-align: center;
 }
 
-nav [classname*='fa-'] {
+nav [className*='fa-'] {
     font-size: 150%;
     color: var(--primary-font);
     transition: 0.3s;
 }
 
 nav a:hover,
-nav [classname*='fa-']:hover {
+nav [className*='fa-']:hover {
     color: var(--hover-color);
 }
 
-nav h1 [classname*='fa-'] {
+nav h1 [className*='fa-'] {
     font-size: 100%;
     color: var(--font-color);
     transition: 0.3s;
@@ -325,6 +326,7 @@ nav a {
 footer {
     text-align: center;
     padding: 4rem 0;
+    color: var(--secondary);
 }
 
 footer ul {

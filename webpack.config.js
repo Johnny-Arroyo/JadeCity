@@ -11,7 +11,7 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.jsx?$/, // Regex to target .js and .jsx files
+                test: /\.(js|jsx)$/, // Regex to target .js and .jsx files
                 exclude: /node_modules/, // Don't transpile node_modules
                 use: {
                     loader: 'babel-loader', // Use Babel to transpile ES6+ and JSX
@@ -24,8 +24,15 @@ module.exports = {
                 },
             },
             {
-                test: /\.css$/, // Regex to target CSS files
+                test: /\.(css)$/i, // Regex to target CSS files
                 use: ['style-loader', 'css-loader'], // Load and inject CSS into the bundle
+            },
+            {
+                test: /\.(png|jpg|jpeg|gif|svg)$/i, // Regex to target image files
+                type: 'asset/resource', // Use asset/resource to emit files and provide URLs
+                generator: {
+                    filename: 'static/images/[name][hash:8][ext]', // Customize output file name and path
+                },
             },
         ],
     },

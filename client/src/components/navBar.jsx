@@ -1,4 +1,5 @@
 import React from 'react'
+import logo from '/client/Public/img/JC-Logo.svg'
 
 const NavBar = () => {
     return (
@@ -10,7 +11,8 @@ const NavBar = () => {
                             <a href="index.html">
                                 <img
                                     id="jclogo"
-                                    src="/client\Public\img\Jade City Logo.svg"
+                                    src={logo}
+                                    alt="Jade City Logo"
                                 />
                                 <span>JADE CITY RECORDS</span>
                             </a>
