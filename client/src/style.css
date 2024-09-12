@@ -7,7 +7,7 @@
     --font-size: 1.3rem;
     --primary-font: 'Belleza', sans-serif;
     --secondary-font: 'Montserrat', sans-serif;
-    --tertiary-font: "Playwrite NZ", cursive;
+    --tertiary-font: 'Playwrite NZ', cursive;
 }
 
 .belleza-regular {
@@ -169,15 +169,16 @@ a:hover {
     padding: 0 1rem 0 0;
 }
 
-.alt-layout .artist-bio, .alt-layout .tech-used {
+.alt-layout .artist-bio,
+.alt-layout .tech-used {
     padding: 0 0 0 1rem;
 }
 
 /* contact section */
 fieldset {
-  border: none;     /* Removes the default border */
-  padding: 0 0 1rem 0;       /* Removes any padding */
-  font-size: 1em;   /* You can adjust this to your needs */
+    border: none; /* Removes the default border */
+    padding: 0 0 1rem 0; /* Removes any padding */
+    font-size: 1em; /* You can adjust this to your needs */
 }
 
 #contact {
@@ -201,33 +202,33 @@ fieldset {
 }
 
 #file {
-  opacity: 0;               /* Makes the input invisible */
-  position: absolute;        /* Removes the input from the normal flow */
-  z-index: -1;               /* Ensures the input is not clickable */
+    opacity: 0; /* Makes the input invisible */
+    position: absolute; /* Removes the input from the normal flow */
+    z-index: -1; /* Ensures the input is not clickable */
 }
 
 /* Custom button style */
 .custom-file-upload {
-  display: inline-block;      /* Makes the label behave like a button */
-  padding: 10px 20px;
-  margin: .5rem;         /* Adds padding to the button */
-  background-color: #008CBA;  /* Button background color */
-  color: white;               /* Text color */
-  border: none;               /* Removes the default border */
-  border-radius: 4px;         /* Rounds the corners of the button */
-  cursor: pointer;            /* Changes the mouse cursor to a pointer when hovering */
+    display: inline-block; /* Makes the label behave like a button */
+    padding: 10px 20px;
+    margin: 0.5rem; /* Adds padding to the button */
+    background-color: #008cba; /* Button background color */
+    color: white; /* Text color */
+    border: none; /* Removes the default border */
+    border-radius: 4px; /* Rounds the corners of the button */
+    cursor: pointer; /* Changes the mouse cursor to a pointer when hovering */
 }
 
 /* Optional: hover effect for the button */
 .custom-file-upload:hover {
-  background-color: #005f73;  /* Darkens the button color on hover */
+    background-color: #005f73; /* Darkens the button color on hover */
 }
 
 .additionalInfo {
-  display: flex;
-  flex-wrap: row wrap;
-  align-items: center;
-  justify-content: center;
+    display: flex;
+    flex-wrap: row wrap;
+    align-items: center;
+    justify-content: center;
 }
 
 /* navbar */
@@ -279,18 +280,18 @@ nav li:first-child {
     text-align: center;
 }
 
-nav [class*='fa-'] {
+nav [classname*='fa-'] {
     font-size: 150%;
     color: var(--primary-font);
     transition: 0.3s;
 }
 
 nav a:hover,
-nav [class*='fa-']:hover {
+nav [classname*='fa-']:hover {
     color: var(--hover-color);
 }
 
-nav h1 [class*='fa-'] {
+nav h1 [classname*='fa-'] {
     font-size: 100%;
     color: var(--font-color);
     transition: 0.3s;
