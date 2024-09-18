@@ -2,10 +2,15 @@
 import React from 'react'
 
 const ArtistCard = ({ name, bio, img, inspiration }) => {
-    return (
+  const imgUrl = img.replace(
+    'https://drive.google.com/file/d/',
+    'https://drive.google.com/thumbnail?id='
+  ).replace(/\/view.*/, '')  
+  
+  return (
         <div className="artist-card">
             <img
-                src={img}
+                src={imgUrl}
                 alt={`Photo of ${name}`}
                 className="artist-img"
             />
