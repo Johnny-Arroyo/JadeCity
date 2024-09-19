@@ -23,7 +23,7 @@ const NewsBanner = () => {
                 City Records!
             </p>
             <div className='news-list'>
-                {news.map((news, index) => (
+                {news.slice(0,3).map((news, index) => (
                     <NewsCard
                         key={index}
                         title={news[0]}

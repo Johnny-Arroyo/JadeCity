@@ -20,7 +20,7 @@ const News = () => {
     
     
     return (
-        <div>
+        <div className='news'>
             <h1>All News</h1>
             <p>
                 Stay tuned for the latest updates and news from Jade
