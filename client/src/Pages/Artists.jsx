@@ -5,7 +5,7 @@ import ArtistCard from '../components/ArtistCard'; // Adjust the path if necessa
 
 const Artists = () => {
   const [artists, setArtists] = useState([]);
-
+  
   useEffect(() => {
     const getArtists = async () => {
       const data = await fetchArtistData();
