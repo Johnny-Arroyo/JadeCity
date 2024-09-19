@@ -13,6 +13,9 @@ app.use('/', express.static(path.join(__dirname, '../dist')))
 const artistsRoutes = require('./routes/artists');
 app.use('/artists', artistsRoutes);
 
+const newsRoutes = require('./routes/news');
+app.use('/news', newsRoutes);
+
 // Handle any other routes (if necessary)
 app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, '../dist', 'index.html'))
