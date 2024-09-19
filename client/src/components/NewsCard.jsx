@@ -4,12 +4,12 @@ function NewsCard({ title, description, img }) {
   
     const handleNewsClick = () => {
         console.log("News Clicked");
+        // redirect to news page at that specific card
     };
   
     return (
     <div className="news-card" onClick={() => handleNewsClick()}>
       <h2>{title}</h2>
-      {/* <p>{description}</p> */}
       <img
             src={img}
             alt={"News Image"}
