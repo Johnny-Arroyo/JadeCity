@@ -6,12 +6,16 @@ const path = require('path')
 const app = express()
 const port = process.env.PORT
 
+// Import routes
+const artistsRoutes = require('./routes/artists')
+const emailRoute = require('./routes/emailRoute.js')
+
 // Serve static files from the dist directory
 app.use('/', express.static(path.join(__dirname, '../dist')))
 
 // API routes
-const artistsRoutes = require('./routes/artists');
-app.use('/artists', artistsRoutes);
+app.use('/api', artistsRoutes)
+app.use('/api', emailRoute)
 
 // Handle any other routes (if necessary)
 app.get('*', (req, res) => {

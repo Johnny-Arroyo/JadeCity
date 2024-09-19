@@ -24,20 +24,52 @@ const Contact = () => {
 
     // Handle form submission
     const handleSubmit = (e) => {
-        e.preventDefault()
-        // Process form data here
-        console.log('Form submitted:', formData)
-        // Reset form
-        setFormData({
-            firstName: '',
-            lastName: '',
-            emailAddress: '',
-            trackName: '',
-            artistName: '',
-            fileUpload: null,
-            additionalInfo: '',
-        })
-    }
+      e.preventDefault();
+  
+      // Create a new FormData object
+      const form = new FormData();
+  
+      // Append the form data
+      form.append('firstName', formData.firstName);
+      form.append('lastName', formData.lastName);
+      form.append('emailAddress', formData.emailAddress);
+      form.append('trackName', formData.trackName);
+      form.append('artistName', formData.artistName);
+      form.append('additionalInfo', formData.additionalInfo);
+  
+      // Append the file (handle multiple file uploads)
+      if (formData.fileUpload && formData.fileUpload.length > 0) {
+          Array.from(formData.fileUpload).forEach((file) => {
+              form.append('fileUpload', file);  // 'fileUpload' is the key
+          });
+      }
+  
+      // Send the form data using fetch
+      fetch('/api/send-email', {
+          method: 'POST',
+          body: form,  // Send FormData, no need for headers with FormData
+      })
+          .then((response) => response.json())
+          .then((data) => {
+              console.log('Success:', data);
+              alert('Form submitted and email sent successfully!');
+          })
+          .catch((error) => {
+              console.error('Error:', error);
+              alert('Failed to submit the form.');
+          });
+  
+      // Reset form data
+      setFormData({
+          firstName: '',
+          lastName: '',
+          emailAddress: '',
+          trackName: '',
+          artistName: '',
+          fileUpload: null,
+          additionalInfo: '',
+      });
+  };
 
     return (
         <div>

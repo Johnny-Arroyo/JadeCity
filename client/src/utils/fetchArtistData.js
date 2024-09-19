@@ -1,7 +1,7 @@
 // src/utils/fetchArtistData.js
 export const fetchArtistData = async () => {
   try {
-      const response = await fetch('/artists'); // This is the endpoint on your server
+      const response = await fetch('api/artists'); // This is the endpoint on your server
       if (!response.ok) {
           throw new Error(`Error fetching data: ${response.statusText}`);
       }
