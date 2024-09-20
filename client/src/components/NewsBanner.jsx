@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { fetchNewsData } from '../utils/fetchNewsData.js';
+import { fetchAPIData } from '../utils/fetchAPIData.js';
 import NewsCard from './NewsCard.jsx'; // Adjust the path if necessary
 
 const NewsBanner = () => {
@@ -8,7 +8,7 @@ const NewsBanner = () => {
 
     useEffect(() => {
         const getNews = async () => {
-            const data = await fetchNewsData();
+            const data = await fetchAPIData('news');
             setNews(data);
         };
 

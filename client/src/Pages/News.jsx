@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import NewsCard from '../components/NewsCard';
-import { fetchNewsData } from '../utils/fetchNewsData.js';
+import { fetchAPIData } from '../utils/fetchAPIData.js';
 
 
 const News = () => {
@@ -10,7 +10,7 @@ const News = () => {
 
     useEffect(() => {
         const getNews = async () => {
-            const data = await fetchNewsData();
+            const data = await fetchAPIData('news');
             setNews(data);
         };
 
