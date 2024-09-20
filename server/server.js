@@ -11,10 +11,10 @@ app.use('/', express.static(path.join(__dirname, '../dist')))
 
 // API routes
 const artistsRoutes = require('./routes/artists');
-app.use('/artists', artistsRoutes);
+app.use('/api/artists', artistsRoutes);
 
 const newsRoutes = require('./routes/news');
-app.use('/news', newsRoutes);
+app.use('/api/news', newsRoutes);
 
 // Handle any other routes (if necessary)
 app.get('*', (req, res) => {
