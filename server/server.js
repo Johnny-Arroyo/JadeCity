@@ -6,9 +6,6 @@ const path = require('path')
 const app = express()
 const port = process.env.PORT
 
-// Import routes
-const artistsRoutes = require('./routes/artists')
-
 // Serve static files from the dist directory
 app.use('/', express.static(path.join(__dirname, '../dist')))
 
