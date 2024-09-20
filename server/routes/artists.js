@@ -3,7 +3,7 @@ require('dotenv').config()
 const express = require('express')
 const router = express.Router()
 
-router.get('/artists', async (req, res) => {
+router.get('/', async (req, res) => {
     try {
         const { default: fetch } = await import('node-fetch') // Use dynamic import
         const sheetId = process.env.GOOGLE_SHEET_ID

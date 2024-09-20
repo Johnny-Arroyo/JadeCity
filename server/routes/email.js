@@ -1,8 +1,6 @@
 const express = require('express')
 const nodemailer = require('nodemailer')
 const multer = require('multer')
-const path = require('path')
-const fs = require('fs')
 const router = express.Router()
 require('dotenv').config()
 
@@ -29,7 +27,7 @@ const upload = multer({
 })
 
 router.post(
-    '/send-email',
+    '/',
     upload.single('fileUpload'),
     (req, res) => {
         const {

@@ -48,7 +48,7 @@ const Contact = () => {
         }
 
         // Send the form data using fetch
-        fetch('/api/send-email', {
+        fetch('/api/email', {
             method: 'POST',
             body: form, // Send FormData, no need for headers with FormData
         })

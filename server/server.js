@@ -8,14 +8,20 @@ const port = process.env.PORT
 
 // Import routes
 const artistsRoutes = require('./routes/artists')
-const emailRoute = require('./routes/emailRoute.js')
 
 // Serve static files from the dist directory
 app.use('/', express.static(path.join(__dirname, '../dist')))
 
 // API routes
-app.use('/api', artistsRoutes)
-app.use('/api', emailRoute)
+
+const emailRoute = require('./routes/email')
+app.use('/api/email', emailRoute)
+
+const artistsRoutes = require('./routes/artists');
+app.use('/api/artists', artistsRoutes);
+
+const newsRoutes = require('./routes/news');
+app.use('/api/news', newsRoutes);
 
 // Handle any other routes (if necessary)
 app.get('*', (req, res) => {

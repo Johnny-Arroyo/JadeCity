@@ -176,6 +176,50 @@ a:hover {
     padding: 0 0 0 1rem;
 }
 
+/* news section */
+.news {
+    padding: 4rem 1rem;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.news-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.news-card {
+    background-color: var(--secondary);
+    border-radius: 10px;
+    padding: 1rem;
+    margin: 1rem;
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+}
+
+.news-card:hover {
+    cursor: pointer;
+}
+
+.news-img {
+    width: 100%;
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.news-card-large {
+    width: 100%;
+    max-width: 600px;
+}
+
+.news-img-large {
+    width: 100%;
+    border-radius: 10px;
+    padding: 30px;
+}
+
 /* contact section */
 fieldset {
     border: none; /* Removes the default border */
