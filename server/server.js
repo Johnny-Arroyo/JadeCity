@@ -10,6 +10,10 @@ const port = process.env.PORT
 app.use('/', express.static(path.join(__dirname, '../dist')))
 
 // API routes
+
+const emailRoute = require('./routes/email')
+app.use('/api/email', emailRoute)
+
 const artistsRoutes = require('./routes/artists');
 app.use('/api/artists', artistsRoutes);
 

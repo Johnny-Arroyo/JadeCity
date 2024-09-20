@@ -12,7 +12,7 @@ const Contact = () => {
         fileUpload: null,
         additionalInfo: '',
     })
-
+    const [isSubmitting, setIsSubmitting] = useState(false)
     // Handle input change
     const handleChange = (e) => {
         const { name, value, type, files } = e.target
@@ -25,18 +25,64 @@ const Contact = () => {
     // Handle form submission
     const handleSubmit = (e) => {
         e.preventDefault()
-        // Process form data here
-        console.log('Form submitted:', formData)
-        // Reset form
-        setFormData({
-            firstName: '',
-            lastName: '',
-            emailAddress: '',
-            trackName: '',
-            artistName: '',
-            fileUpload: null,
-            additionalInfo: '',
+
+        // Create a new FormData object
+        const form = new FormData()
+
+        // Append the form data
+        form.append('firstName', formData.firstName)
+        form.append('lastName', formData.lastName)
+        form.append('emailAddress', formData.emailAddress)
+        form.append('trackName', formData.trackName)
+        form.append('artistName', formData.artistName)
+        form.append('additionalInfo', formData.additionalInfo)
+
+        // Append the file (handle multiple file uploads)
+        if (formData.fileUpload) {
+            form.append('fileUpload', formData.fileUpload[0]) // 'fileUpload' is the key
+        }
+
+        // Logging FormData for debugging
+        for (let [key, value] of form.entries()) {
+            console.log(`${key}:`, value)
+        }
+
+        // Send the form data using fetch
+        fetch('/api/email', {
+            method: 'POST',
+            body: form, // Send FormData, no need for headers with FormData
         })
+            .then((response) => {
+              // Check if response is JSON or text
+              const contentType = response.headers.get('Content-Type');
+              if (contentType && contentType.includes('application/json')) {
+                  return response.json();  // Parse JSON
+              } else {
+                  return response.text();   // Parse text
+              }
+          })
+            .then((data) => {
+                console.log('Success:', data)
+                alert('Form submitted and email sent successfully!')
+                // Reset form data
+                setFormData({
+                    firstName: '',
+                    lastName: '',
+                    emailAddress: '',
+                    trackName: '',
+                    artistName: '',
+                    fileUpload: null,
+                    additionalInfo: '',
+                })
+            })
+            .catch((error) => {
+                console.error('Error:', error)
+                alert('Failed to submit the form.')
+            })
+            .finally(() => {
+                // Reset submitting state
+                setIsSubmitting(false)
+            })
     }
 
     return (
@@ -111,7 +157,7 @@ const Contact = () => {
                             />
                         </fieldset>
                         <fieldset>
-                            <legend>File Upload</legend>
+                            <legend></legend>
                             <label
                                 htmlFor="file"
                                 className="custom-file-upload">
@@ -126,7 +172,7 @@ const Contact = () => {
                                 required
                                 aria-required="true"
                             />
-                            <p>Maximum file size - 10MB</p>
+                            <p>Maximum file size - 25MB</p>
                         </fieldset>
                         <fieldset>
                             <legend>
@@ -140,8 +186,13 @@ const Contact = () => {
                                 value={formData.additionalInfo}
                                 onChange={handleChange}></textarea>
                         </fieldset>
-                        <button className="submit" type="submit">
-                            Submit
+                        <button
+                            className="submit"
+                            type="submit"
+                            disabled={isSubmitting}>
+                            {isSubmitting
+                                ? 'Submitting...'
+                                : 'Submit'}
                         </button>
                     </form>
                 </section>
