@@ -10,9 +10,9 @@ const ArtistCard = ({ name, bio, img, inspiration }) => {
   return (
         <div className="artist-card">
             <img
+                className="artist-img"
                 src={imgUrl}
                 alt={`Photo of ${name}`}
-                className="artist-img"
             />
             <div className="artist-info">
                 <h3>{name}</h3>
