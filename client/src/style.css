@@ -247,11 +247,12 @@ fieldset {
     padding: 0;
 }
 
-#file {
-    opacity: 0; /* Makes the input invisible */
-    position: absolute; /* Removes the input from the normal flow */
-    z-index: -1; /* Ensures the input is not clickable */
-}
+/* #file {
+    opacity: 0; /* Makes the input invisible
+    position: absolute; /* Removes the input from the normal flow
+    z-index: -1; /* Ensures the input is not clickable
+} 
+*/
 
 /* Custom button style */
 .custom-file-upload {
