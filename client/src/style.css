@@ -176,6 +176,10 @@ a:hover {
     padding: 0 0 0 1rem;
 }
 
+.artist-card:hover {
+    cursor: pointer;
+}
+
 .artist-card-large {
     width: 100%;
     max-width: 600px;
