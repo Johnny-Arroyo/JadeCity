@@ -1,14 +1,25 @@
 // src/components/ArtistCard.js
 import React from 'react'
 
+import { useNavigate } from 'react-router-dom';
+
 const ArtistCard = ({ name, bio, img, inspiration }) => {
-  const imgUrl = img.replace(
+  
+    const navigate = useNavigate();
+  
+    const imgUrl = img.replace(
     'https://drive.google.com/file/d/',
     'https://drive.google.com/thumbnail?id='
   ).replace(/\/view.*/, '')  
+
+  const handleArtistClick = () => {
+    // redirect to artist page of that specific card. /artist/:name, then creates a larger version of the artist card
+    const newName = name.replace(/ /g, '-');
+    navigate(`/artists/${newName}`, { state: { name, bio, imgUrl, inspiration } });
+  };
   
   return (
-        <div className="artist-card">
+        <div className="artist-card" onClick={() => handleArtistClick()}>
             <img
                 className="artist-img"
                 src={imgUrl}

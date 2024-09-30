@@ -176,6 +176,22 @@ a:hover {
     padding: 0 0 0 1rem;
 }
 
+.artist-card-large {
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.artist-img-large {
+    width: 100%;
+    border-radius: 10px;
+    padding: 30px;
+}
+
 /* news section */
 .news {
     padding: 4rem 1rem;
