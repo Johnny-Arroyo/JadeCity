@@ -6,6 +6,7 @@ import News from './Pages/News'
 import NewsBanner from './components/NewsBanner'
 import NewsCardLarge from './components/NewsCardLarge'
 import Artists from './Pages/Artists'
+import ArtistCardLarge from './components/ArtistCardLarge'
 import Shop from './Pages/Shop'
 import ContactForm from './Pages/Contact'
 import Footer from './components/Footer'
@@ -35,6 +36,7 @@ const App = () => {
                     <Route path="/News" element={<News />} />
                     <Route path="/News/:title" element={<NewsCardLarge/>} />
                     <Route path="/Artists" element={<Artists />} />
+                    <Route path="/Artists/:name" element={<ArtistCardLarge />} />
                     <Route path="/Shop" element={<Shop />} />
                     <Route path="/Contact" element={<ContactForm />} />
                 </Routes>
