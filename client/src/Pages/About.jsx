@@ -3,7 +3,7 @@ import React from 'react'
 const About = () => {
     return (
         <>
-            <div className="gradient"></div>
+            {/* <div className="gradient"></div> */}
             <section id="about">
                 <p className="welcome">
                     Welcome to...
