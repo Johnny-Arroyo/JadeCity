@@ -36,14 +36,14 @@ router.get('/', async (req, res) => {
         const products = await response.json()
         // console.log("HERE ARE THE PRODUCTS => ", products);
 
-        //write product data to local file to more easily read it
-        fs.writeFile('productsResponse.json', JSON.stringify(products, null, 2), (err) => {
-          if (err) {
-              console.error('Error writing to file:', err);
-          } else {
-              console.log('Products data written to productsResponse.json');
-          }
-      });
+      //   //write product data to local file to more easily read it
+      //   fs.writeFile('productsResponse.json', JSON.stringify(products, null, 2), (err) => {
+      //     if (err) {
+      //         console.error('Error writing to file:', err);
+      //     } else {
+      //         console.log('Products data written to productsResponse.json');
+      //     }
+      // });
 
 
         res.json(products.data)

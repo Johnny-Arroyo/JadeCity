@@ -12,7 +12,7 @@ const Shop = () => {
                 const data = await fetchAPIData('shop');
 
                 // Log the entire product list to verify the structure
-                console.log('Full product list:', data);
+                // console.log('Full product list:', data);
 
                 // Filter products to include only those that are visible
                 const availableProducts = data
@@ -42,7 +42,7 @@ const Shop = () => {
                     .sort(() => Math.random() - 0.5)  // Shuffle products randomly
                     .slice(0, 3);                      // Pick 3 random products
 
-                console.log('Random products selected:', randomProducts); // Log the selected random products
+                // console.log('Random products selected:', randomProducts); // Log the selected random products
                 setProducts(randomProducts);
             } catch (err) {
                 console.error('Error fetching or processing shop data:', err);
@@ -69,7 +69,7 @@ const Shop = () => {
                         />
                     ))
                 ) : (
-                    <p>No in-stock products available with images</p>
+                    <p>Loading Merch...</p>
                 )}
             </div>
         </div>

@@ -6,9 +6,6 @@ function NewsCardLarge() {
     const location = useLocation();
     const { title, description, imgUrl } = location.state; // get title, description, img from the card we clicked on in NewsCard
 
-    console.log(imgUrl);
-
-
     return (
         <div className="news-card-large" onClick={() => handleNewsClick()}>
             <h2>{title}</h2>
