@@ -26,6 +26,7 @@ const Artists = () => {
             bio={artist[1]}
             img={artist[2]}
             inspiration={artist[3]}
+            spotify={artist[4]}
           />
         ))}
       </div>
