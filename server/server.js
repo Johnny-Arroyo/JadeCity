@@ -20,6 +20,12 @@ app.use('/api/artists', artistsRoutes);
 const newsRoutes = require('./routes/news');
 app.use('/api/news', newsRoutes);
 
+const shopRoutes = require('./routes/shop');
+app.use('/api/shop', shopRoutes);
+
+// const printifyRoutes = require('./routes/printify');
+// app.use('/api/printify-products', printifyRoutes);
+
 // Handle any other routes (if necessary)
 app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, '../dist', 'index.html'))
