@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { fetchAPIData } from '../utils/fetchAPIData';
-import ProductCard from '../components/ProductCard';
+import { fetchAPIData } from '../../utils/fetchAPIData';
+import ShopCard from '../../components/ShopCard/ShopCard';
+import styles from './Shop.css'
 
 const Shop = () => {
     const [products, setProducts] = useState([]);
-    const [error, setError] = useState(null);
 
     useEffect(() => {
         const getShopData = async () => {
@@ -16,7 +16,8 @@ const Shop = () => {
 
                 // Filter products to include only those that are visible
                 const availableProducts = data
-                    .filter(product => product.visible === true)  // Filter for products where visible is true
+                    .filter(product => product.visible === true)
+                    
                     .map(product => {
                         // Select a random image from the images array
                         const randomImageIndex = Math.floor(Math.random() * product.images.length);
@@ -54,13 +55,12 @@ const Shop = () => {
     }, []); // Empty dependency array ensures this runs only once
 
     return (
-        <div>
-            <h1>Shop</h1>
-            {error && <p>Error: {error}</p>}
-            <div className="product-grid">
+        <section id="shop">
+            <h2>Shop</h2>
+            <div className="shop-list">
                 {products.length > 0 ? (
                     products.map(product => (
-                        <ProductCard
+                        <ShopCard
                             key={product.id}  // Ensure this key is unique
                             title={product.title}
                             image={product.image}
@@ -72,7 +72,7 @@ const Shop = () => {
                     <p>Loading Merch...</p>
                 )}
             </div>
-        </div>
+        </section>
     );
 };
 
