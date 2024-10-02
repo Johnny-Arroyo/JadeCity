@@ -28,8 +28,8 @@ const App = () => {
                             <About />
                             <NewsBanner />
                             <Artists />
-                            <ContactForm />
                             <Shop />
+                            <ContactForm />
                         </>
                         } />
                     <Route path="/About" element={<About />} />
