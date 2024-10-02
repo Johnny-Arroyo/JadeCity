@@ -1,7 +1,7 @@
 require('dotenv').config()
 const express = require('express') // Make sure to include this if using node-fetch
 const router = express.Router()
-const fs = require('fs');
+// const fs = require('fs');
 
 const PRINTIFY_API_KEY = process.env.PRINTIFY_API_KEY
 const PRINTIFY_SHOP_ID = process.env.PRINTIFY_SHOP_ID // Get store ID from env
