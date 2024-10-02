@@ -1,19 +1,10 @@
 // src/components/ArtistSection.js
 import React, { useEffect, useState } from 'react';
-import { fetchArtistData } from '../utils/fetchArtistData.js';
 import ArtistCard from '../components/ArtistCard'; // Adjust the path if necessary
 
-const Artists = () => {
-  const [artists, setArtists] = useState([]);
-  
-  useEffect(() => {
-    const getArtists = async () => {
-      const data = await fetchArtistData();
-      setArtists(data);
-    };
+const Artists = (props) => {
 
-    getArtists();
-  }, []);
+  const artists = props.artists || []; 
 
   return (
     <section id="artists">
@@ -26,6 +17,7 @@ const Artists = () => {
             bio={artist[1]}
             img={artist[2]}
             inspiration={artist[3]}
+            spotify={artist[4]}
           />
         ))}
       </div>

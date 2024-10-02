@@ -1,4 +1,3 @@
-// src/components/ContactForm.jsx
 import React, { useState } from 'react'
 
 const Contact = () => {
@@ -9,35 +8,74 @@ const Contact = () => {
         emailAddress: '',
         trackName: '',
         artistName: '',
-        fileUpload: null,
+        linkUpload: '',
         additionalInfo: '',
     })
-
+    const [isSubmitting, setIsSubmitting] = useState(false)
+    const [successMessage, setSuccessMessage] = useState('')
     // Handle input change
     const handleChange = (e) => {
-        const { name, value, type, files } = e.target
+        const { name, value } = e.target
         setFormData({
             ...formData,
-            [name]: type === 'file' ? files : value,
+            [name]: value,
         })
     }
 
     // Handle form submission
-    const handleSubmit = (e) => {
-        e.preventDefault()
-        // Process form data here
-        console.log('Form submitted:', formData)
-        // Reset form
+// Handle form submission
+const handleSubmit = (e) => {
+  e.preventDefault();
+
+  setIsSubmitting(true);
+
+  // Create a new object to send as JSON
+  const formDataToSend = {
+      firstName: formData.firstName,
+      lastName: formData.lastName,
+      emailAddress: formData.emailAddress,
+      trackName: formData.trackName,
+      artistName: formData.artistName,
+      linkUpload: formData.linkUpload,
+      additionalInfo: formData.additionalInfo,
+  };
+
+  // Send the form data using fetch
+  fetch('/api/email', {
+      method: 'POST',
+      headers: {
+          'Content-Type': 'application/json', // Add Content-Type header
+      },
+      body: JSON.stringify(formDataToSend), // Send JSON data
+  })
+      .then((response) => {
+          if (response.headers.get('content-type')?.includes('application/json')) {
+              return response.json();
+          }
+          return response.text(); // Handle non-JSON responses
+      })
+      .then((data) => {
+        setSuccessMessage('Thank you for your sumbmission')
         setFormData({
             firstName: '',
             lastName: '',
             emailAddress: '',
             trackName: '',
             artistName: '',
-            fileUpload: null,
+            linkUpload: '',
             additionalInfo: '',
         })
-    }
+      })
+      .catch((error) => {
+        console.error('Error:', error)
+        setSuccessMessage('Failed to submit the form. Please try again.')
+      })
+      .finally(() => {
+          // Reset submitting state
+          setIsSubmitting(false);
+      });
+};
+
 
     return (
         <div>
@@ -109,24 +147,19 @@ const Contact = () => {
                                 required
                                 placeholder="Artist Name*"
                             />
+                            
                         </fieldset>
                         <fieldset>
-                            <legend>File Upload</legend>
-                            <label
-                                htmlFor="file"
-                                className="custom-file-upload">
-                                Upload Song
-                            </label>
+                            <legend>Demo Link</legend>
                             <input
-                                type="file"
-                                id="file"
-                                name="fileUpload"
+                                type="url"
+                                id="linkUpload"
+                                name="linkUpload"
+                                value={formData.linkUpload}
                                 onChange={handleChange}
-                                multiple
-                                required
-                                aria-required="true"
+                                placeholder="Your Track URL*"
                             />
-                            <p>Maximum file size - 10MB</p>
+                            <p>*please enable downloads on your track*</p>
                         </fieldset>
                         <fieldset>
                             <legend>
@@ -140,10 +173,22 @@ const Contact = () => {
                                 value={formData.additionalInfo}
                                 onChange={handleChange}></textarea>
                         </fieldset>
-                        <button className="submit" type="submit">
-                            Submit
+                        <button
+                            className="submit"
+                            type="submit"
+                            disabled={isSubmitting}>
+                            {isSubmitting
+                                ? 'Submitting...'
+                                : 'Submit'}
                         </button>
                     </form>
+
+                    {successMessage && (
+                        <div className="successMessage">
+                            {successMessage}
+                        </div>
+                    )}
+
                 </section>
             </div>
         </div>

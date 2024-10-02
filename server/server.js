@@ -10,8 +10,21 @@ const port = process.env.PORT
 app.use('/', express.static(path.join(__dirname, '../dist')))
 
 // API routes
+
+const emailRoute = require('./routes/email')
+app.use('/api/email', emailRoute)
+
 const artistsRoutes = require('./routes/artists');
-app.use('/artists', artistsRoutes);
+app.use('/api/artists', artistsRoutes);
+
+const newsRoutes = require('./routes/news');
+app.use('/api/news', newsRoutes);
+
+const shopRoutes = require('./routes/shop');
+app.use('/api/shop', shopRoutes);
+
+// const printifyRoutes = require('./routes/printify');
+// app.use('/api/printify-products', printifyRoutes);
 
 // Handle any other routes (if necessary)
 app.get('*', (req, res) => {
