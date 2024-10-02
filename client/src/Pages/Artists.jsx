@@ -1,19 +1,10 @@
 // src/components/ArtistSection.js
 import React, { useEffect, useState } from 'react';
-import { fetchAPIData } from '../utils/fetchAPIData.js';
 import ArtistCard from '../components/ArtistCard'; // Adjust the path if necessary
 
-const Artists = () => {
-  const [artists, setArtists] = useState([]);
-  
-  useEffect(() => {
-    const getArtists = async () => {
-      const data = await fetchAPIData('artists');
-      setArtists(data);
-    };
+const Artists = (props) => {
 
-    getArtists();
-  }, []);
+  const artists = props.artists || []; 
 
   return (
     <section id="artists">

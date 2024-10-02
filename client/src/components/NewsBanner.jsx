@@ -1,19 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import { fetchAPIData } from '../utils/fetchAPIData.js';
 import NewsCard from './NewsCard.jsx'; // Adjust the path if necessary
 
-const NewsBanner = () => {
+const NewsBanner = (props) => {
     
-    const [news, setNews] = useState([]);
-
-    useEffect(() => {
-        const getNews = async () => {
-            const data = await fetchAPIData('news');
-            setNews(data);
-        };
-
-        getNews();
-    }, []);
+    const news = props.news || []; 
     
     return (
         <div className='news'>
