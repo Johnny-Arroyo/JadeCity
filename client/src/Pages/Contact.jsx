@@ -79,7 +79,6 @@ const handleSubmit = (e) => {
 
     return (
         <div>
-            <div className="gradient"></div>
             <div className="section-plum">
                 <section id="contact">
                     <form

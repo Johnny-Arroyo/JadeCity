@@ -238,7 +238,7 @@ a:hover {
 
 /* contact section */
 fieldset {
-    border: none; /* Removes the default border */
+    border: 1px var(--font-color); /* Removes the default border */
     padding: 0 0 1rem 0; /* Removes any padding */
     font-size: 1em; /* You can adjust this to your needs */
 }
@@ -263,29 +263,6 @@ fieldset {
     padding: 0;
 }
 
-/* #file {
-    opacity: 0; /* Makes the input invisible
-    position: absolute; /* Removes the input from the normal flow
-    z-index: -1; /* Ensures the input is not clickable
-} 
-*/
-
-/* Custom button style */
-.custom-file-upload {
-    display: inline-block; /* Makes the label behave like a button */
-    padding: 10px 20px;
-    margin: 0.5rem; /* Adds padding to the button */
-    background-color: #008cba; /* Button background color */
-    color: white; /* Text color */
-    border: none; /* Removes the default border */
-    border-radius: 4px; /* Rounds the corners of the button */
-    cursor: pointer; /* Changes the mouse cursor to a pointer when hovering */
-}
-
-/* Optional: hover effect for the button */
-.custom-file-upload:hover {
-    background-color: #005f73; /* Darkens the button color on hover */
-}
 
 .additionalInfo {
     display: flex;

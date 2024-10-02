@@ -7,7 +7,7 @@ const NewsBanner = (props) => {
     
     return (
         <div className='news'>
-            <h1>Latest News</h1>
+            <h2>Latest News</h2>
             <p>
                 Stay tuned for the latest updates and news from Jade
                 City Records!

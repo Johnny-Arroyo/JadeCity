@@ -7,7 +7,7 @@ import NewsBanner from './components/NewsBanner'
 import NewsCardLarge from './components/NewsCardLarge'
 import Artists from './Pages/Artists'
 import ArtistCardLarge from './components/ArtistCardLarge'
-import Shop from './Pages/Shop'
+import Shop from './Pages/Shop/Shop.jsx'
 import ContactForm from './Pages/Contact'
 import Footer from './components/Footer'
 import { fetchAPIData } from './utils/fetchAPIData.js';

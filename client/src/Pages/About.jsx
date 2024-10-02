@@ -29,7 +29,6 @@ const About = () => {
                     impedit?
                 </p>
             </section>
-            <div className="gradient"></div>
         </>
     )
 }
