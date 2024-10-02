@@ -3,19 +3,24 @@ import React from 'react'
 
 import { useNavigate } from 'react-router-dom';
 
-const ArtistCard = ({ name, bio, img, inspiration }) => {
+const ArtistCard = ({ name, bio, img, inspiration, spotify }) => {
   
     const navigate = useNavigate();
   
     const imgUrl = img.replace(
-    'https://drive.google.com/file/d/',
-    'https://drive.google.com/thumbnail?id='
-  ).replace(/\/view.*/, '')  
+        'https://drive.google.com/file/d/',
+        'https://drive.google.com/thumbnail?id='
+    ).replace(/\/view.*/, '')  
+
+    const spotifyUrl = spotify.replace(
+        'artist',
+        'embed/artist'
+    ).replace(/\?.*/, '?utm_source=generator') 
 
   const handleArtistClick = () => {
     // redirect to artist page of that specific card. /artist/:name, then creates a larger version of the artist card
     const newName = name.replace(/ /g, '-');
-    navigate(`/artists/${newName}`, { state: { name, bio, imgUrl, inspiration } });
+    navigate(`/artists/${newName}`, { state: { name, bio, imgUrl, inspiration, spotifyUrl } });
   };
   
   return (
