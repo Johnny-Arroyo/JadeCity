@@ -1,0 +1,34 @@
+/* contact section */
+fieldset {
+  border: 1px var(--font-color); /* Removes the default border */
+  padding: 0 0 1rem 0; /* Removes any padding */
+  font-size: 1em; /* You can adjust this to your needs */
+}
+
+#contact {
+  max-width: auto;
+  text-align: center;
+  margin: 1rem 4rem;
+  padding: 0;
+  background-color: var(--secondary);
+  font-family: var(--primary-font);
+  border-radius: var(--comp-b-radius);
+}
+
+#contactHeading {
+  margin: 0;
+  padding: 1rem 0 1rem 0;
+}
+
+#contact p {
+  font-size: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+.additionalInfo {
+  display: flex;
+  flex-wrap: row wrap;
+  align-items: center;
+  justify-content: center;
+}

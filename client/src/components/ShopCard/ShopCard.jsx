@@ -9,8 +9,8 @@ const ShopCard = ({ title, image, price, url }) => {
     return (
         <div className="shop-card" onClick={handleCardClick} style={{ cursor: 'pointer' }}>
             <img src={image} alt={title} />
-            <h2>{title}</h2>
-            <p>Price: ${price}</p>
+            <h3>{title}</h3>
+            <p>${price}</p>
         </div>
     );
 };

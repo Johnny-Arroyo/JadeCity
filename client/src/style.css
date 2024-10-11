@@ -8,6 +8,8 @@
     --primary-font: 'Belleza', sans-serif;
     --secondary-font: 'Montserrat', sans-serif;
     --tertiary-font: 'Playwrite NZ', cursive;
+    --comp-b-radius: 10px;
+    --img-b-radius: 8px;
 }
 
 .belleza-regular {
@@ -45,7 +47,9 @@ h1,
 h2,
 h3,
 h4 {
-    margin: 0;
+    margin: 1rem 0 0 0;
+    display: flex;
+    justify-content: center;  
 }
 
 img {
@@ -59,11 +63,6 @@ a {
 a:hover {
     color: var(--hover-color);
     text-decoration: none;
-}
-
-/*background color divs */
-.section-plum {
-    background-color: var(--primary);
 }
 
 .section-dkblue {
@@ -137,13 +136,12 @@ a:hover {
 }
 
 .artist-info {
-    border: 1px solid var(--tertiary);
-    background-color: var(--secondary);
     padding: 1rem;
-    border-radius: 10px;
-    color: var(--font-color);
     font-size: 1rem;
     line-height: 1.5;
+    background-color: var(--secondary);
+    border-radius: var(--comp-b-radius);
+    color: var(--font-color);
 }
 
 #artists ul {
@@ -157,7 +155,7 @@ a:hover {
     font-size: 1rem;
 }
 
-#artist-card #artist-img {
+#artist-card .artist-img {
     border-left: 1px solid var(--secondary);
     border-top: 1px solid var(--secondary);
     border-radius: 15px;
@@ -192,84 +190,45 @@ a:hover {
     padding: 30px;
 }
 
-/* news section */
-.news {
-    padding: 4rem 1rem;
-    margin: 0 auto;
-    max-width: 1200px;
+/* News */
+.news-card {
+  background-color: var(--secondary);
+  border-radius: 10px;
+  padding: 1rem;
+  margin: 1rem;
+  width: 100%;
+  max-width: 300px;
+  text-align: center;
 }
 
 .news-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.news-card {
-    background-color: var(--secondary);
-    border-radius: 10px;
-    padding: 1rem;
-    margin: 1rem;
-    width: 100%;
-    max-width: 300px;
-    text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .news-card:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .news-img {
-    width: 100%;
-    border-radius: 10px;
-    padding: 30px;
+  width: 100%;
+  border-radius: 10px;
+  padding: 30px;
 }
 
 .news-card-large {
-    width: 100%;
-    max-width: 600px;
+  width: 100%;
+  max-width: 600px;
 }
 
 .news-img-large {
-    width: 100%;
-    border-radius: 10px;
-    padding: 30px;
-}
-
-/* contact section */
-fieldset {
-    border: 1px var(--font-color); /* Removes the default border */
-    padding: 0 0 1rem 0; /* Removes any padding */
-    font-size: 1em; /* You can adjust this to your needs */
-}
-
-#contact {
-    max-width: auto;
-    text-align: center;
-    margin: 0 auto;
-    padding: 0;
-    background-color: var(--secondary);
-    font-family: var(--primary-font);
-}
-
-#contactHeading {
-    margin: 0;
-    padding: 1rem 0 1rem 0;
-}
-
-#contact p {
-    font-size: 1rem;
-    margin: 0;
-    padding: 0;
+  width: 100%;
+  border-radius: 10px;
+  padding: 30px;
 }
 
 
-.additionalInfo {
-    display: flex;
-    flex-wrap: row wrap;
-    align-items: center;
-    justify-content: center;
-}
 
 /* navbar */
 .nav-background {

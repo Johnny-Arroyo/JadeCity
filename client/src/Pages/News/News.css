@@ -1,0 +1,20 @@
+#news {
+    padding: 4rem 1rem;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.news-list-page {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#news img {
+    
+}
+
+#news p {
+    display: flex;
+    justify-content: center;
+}

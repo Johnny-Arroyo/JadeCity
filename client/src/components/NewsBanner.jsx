@@ -6,7 +6,7 @@ const NewsBanner = (props) => {
     const news = props.news || []; 
     
     return (
-        <div className='news'>
+        <section id='news'>
             <h2>Latest News</h2>
             <p>
                 Stay tuned for the latest updates and news from Jade
@@ -22,7 +22,7 @@ const NewsBanner = (props) => {
                     />
                 ))}
             </div>
-        </div>
+        </section>
     )
 }
 

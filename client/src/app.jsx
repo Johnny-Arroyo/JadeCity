@@ -2,13 +2,13 @@ import React, {useState, useEffect} from 'react'
 
 import NavBar from './components/NavBar'
 import About from './Pages/About'
-import News from './Pages/News'
+import News from './Pages/News/News.jsx'
 import NewsBanner from './components/NewsBanner'
 import NewsCardLarge from './components/NewsCardLarge'
 import Artists from './Pages/Artists'
 import ArtistCardLarge from './components/ArtistCardLarge'
 import Shop from './Pages/Shop/Shop.jsx'
-import ContactForm from './Pages/Contact'
+import ContactForm from './Pages/Contact/Contact.jsx'
 import Footer from './components/Footer'
 import { fetchAPIData } from './utils/fetchAPIData.js';
 

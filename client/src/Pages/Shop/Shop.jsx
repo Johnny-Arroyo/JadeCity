@@ -69,7 +69,7 @@ const Shop = () => {
                         />
                     ))
                 ) : (
-                    <p>Loading Merch...</p>
+                    <div className="loading"><p>Loading Merch...</p></div>
                 )}
             </div>
         </section>
