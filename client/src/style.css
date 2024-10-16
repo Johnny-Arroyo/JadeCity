@@ -34,7 +34,6 @@ body {
     margin: 0;
     font-family: var(--primary-font);
     background-image: url('../Public/img/JC-bg.png');
-    /* height: 100%; */
     background-attachment: fixed;
     background-size: cover;
     background-position: center 10%;
