@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import NewsCard from '../../components/NewsCard';
+import NewsCard from '../../components/NewsCard/NewsCard';
 import styles from "./News.css"
 
 const News = (props) => {

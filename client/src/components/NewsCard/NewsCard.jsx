@@ -1,5 +1,6 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom';
+import './NewsCard.css'
 
 function NewsCard({ title, description, img }) {
   
