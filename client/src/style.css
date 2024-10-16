@@ -33,7 +33,7 @@ body {
     padding: 0;
     margin: 0;
     font-family: var(--primary-font);
-    background-image: url('../Public/img/JC-bg.png');
+    background-image: url('../Public/img/JC(HighContrast).png');
     background-attachment: fixed;
     background-size: cover;
     background-position: center 10%;
@@ -79,38 +79,44 @@ a:hover {
 
 /* intro styles */
 #about {
-    padding: 0rem 1rem 18rem 1rem;
-    max-width: 1200px;
-    margin: 0 auto;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    padding: 2rem;
+    max-width: 750px;
+    margin: 2rem auto;
     width: auto;
     height: auto;
     color: var(--secondary);
 }
 
+#about .City {
+  font-size: 3rem;
+  font-family: var(--primary-font);
+}
+
 #about p {
-    font-size: 1rem;
+    font-size: 2rem;
     line-height: 1.5;
     font-family: var(--secondary-font);
+    font-weight:500;
     text-align: justify;
 }
 
 #about .welcome {
-    font-family: var(--tertiary-font);
-    font-size: 4rem;
+    font-family: var(--secondary-font);
+    font-size: 3rem;
+    padding: 0;
+    margin: 1rem 0 0 0
 }
 
 #about .records {
     font-family: var(--primary-font);
-    font-size: 6rem;
+    font-size: 5rem;
     margin-left: 1rem;
     color: var(--aqua);
     display: block;
     font-weight: 700;
-}
-
-#about h2 {
-    font-size: 3rem;
-    font-family: var(--secondary-font);
 }
 
 /* artists */
@@ -134,15 +140,6 @@ a:hover {
     font-family: var(--secondary-font);
 }
 
-.artist-info {
-    padding: 1rem;
-    font-size: 1rem;
-    line-height: 1.5;
-    background-color: var(--secondary);
-    border-radius: var(--comp-b-radius);
-    color: var(--font-color);
-}
-
 #artists ul {
     list-style-type: none;
     padding: 0;
@@ -154,23 +151,9 @@ a:hover {
     font-size: 1rem;
 }
 
-#artist-card .artist-img {
-    border-left: 1px solid var(--secondary);
-    border-top: 1px solid var(--secondary);
-    border-radius: 15px;
-    width: 280px;
-    padding: 1rem;
-    margin: 2rem 0 4rem 0;
-}
-
 .tech-used,
 .artist-bio {
     padding: 0 1rem 0 0;
-}
-
-.alt-layout .artist-bio,
-.alt-layout .tech-used {
-    padding: 0 0 0 1rem;
 }
 
 .artist-card-large {
@@ -187,6 +170,12 @@ a:hover {
     width: 100%;
     border-radius: 10px;
     padding: 30px;
+}
+
+.artist-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 /* News */
@@ -240,6 +229,10 @@ nav {
     padding: 0.25rem;
 }
 
+nav span {
+  font-size: 150%;
+}
+
 nav h1 {
     display: flex;
     justify-content: center;
@@ -279,7 +272,6 @@ nav li:first-child {
 }
 
 nav [className*='fa-'] {
-    font-size: 150%;
     color: var(--primary-font);
     transition: 0.3s;
 }
@@ -323,7 +315,7 @@ nav a {
 footer {
     text-align: center;
     padding: 4rem 0;
-    color: var(--secondary);
+    color: var(--font-color);
 }
 
 footer ul {
@@ -364,37 +356,6 @@ footer ul {
         gap: 1rem;
     }
 
-    .text {
-        order: 2;
-        grid-column: 5/11;
-        grid-row: 1/2;
-        text-align: right;
-    }
-
-    .artist-card img {
-        width: 300px;
-        grid-column: 1/6;
-        grid-row: 1/2;
-    }
-
-    .artists ul {
-        justify-content: flex-end;
-    }
-
-    .artists .alt-layout .text {
-        grid-column: 1/7;
-        order: 2;
-        text-align: left;
-    }
-
-    .artist-card .alt-layout img {
-        grid-column: 6/11;
-        grid-row: 1/2;
-    }
-
-    .artists .alt-layout ul {
-        justify-content: flex-start;
-    }
 }
 
 @media (min-width: 850px) {
@@ -428,13 +389,6 @@ footer ul {
 }
 /* Mobile */
 @media (max-width: 480px) {
-    #artists .alt-layout img {
-        width: 50%;
-    }
-    #artists img {
-        width: 50%;
-    }
-
     nav {
         display: flex;
         flex-direction: column;

@@ -16,7 +16,7 @@ const NavBar = () => {
                                         src={logo}
                                         alt="Jade City Logo"
                                     />
-                                    <span>JADE CITY RECORDS</span>
+                                    <span className="JCR">JADE CITY RECORDS</span>
                                 </Link>
                             </h1>
                         </li>
