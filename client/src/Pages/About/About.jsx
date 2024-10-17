@@ -1,4 +1,5 @@
 import React from 'react'
+import styles from "./About.css"
 
 const About = () => {
     return (
@@ -8,7 +9,7 @@ const About = () => {
                 Welcome to
                 <span className="records">JADE CITY,</span>
             </p>
-            <h2 className="City">the City of Mages</h2>
+            <h2 className="city">the City of Mages</h2>
             <p>
                 — your new home for ethereal melodic bass. With
                 immersive songwriting, enchanting vocals, and
