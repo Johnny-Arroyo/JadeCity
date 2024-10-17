@@ -1,19 +1,14 @@
-import React, { useEffect, useState } from 'react';
-import NewsCard from './NewsCard.jsx'; // Adjust the path if necessary
+import React, { useEffect, useState } from 'react'
+import NewsCard from './NewsCard.jsx' // Adjust the path if necessary
 
 const NewsBanner = (props) => {
-    
-    const news = props.news || []; 
-    
+    const news = props.news || []
+
     return (
-        <div className='news'>
-            <h1>Latest News</h1>
-            <p>
-                Stay tuned for the latest updates and news from Jade
-                City Records!
-            </p>
-            <div className='news-list'>
-                {news.slice(0,3).map((news, index) => (
+        <section id="news">
+            <h2>Latest News</h2>
+            <div className="news-list">
+                {news.slice(0, 3).map((news, index) => (
                     <NewsCard
                         key={index}
                         title={news[0]}
@@ -22,8 +17,12 @@ const NewsBanner = (props) => {
                     />
                 ))}
             </div>
-        </div>
+            <p>
+                Stay tuned for the latest updates and news from Jade
+                City Records!
+            </p>
+        </section>
     )
 }
 
-export default NewsBanner;
+export default NewsBanner

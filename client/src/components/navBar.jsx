@@ -16,7 +16,7 @@ const NavBar = () => {
                                         src={logo}
                                         alt="Jade City Logo"
                                     />
-                                    <span>JADE CITY RECORDS</span>
+                                    <span className="JCR">JADE CITY RECORDS</span>
                                 </Link>
                             </h1>
                         </li>
@@ -45,6 +45,17 @@ const NavBar = () => {
                                     className="fa-brands fa-youtube"
                                     aria-hidden="true"></span>
                                 <span className="sr-only">YouTube</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                className="discord"
+                                href="https://discord.gg/jxNq7RSH"
+                                target="_blank">
+                                <span
+                                    className="fa-brands fa-discord"
+                                    aria-hidden="true"></span>
+                                <span className="sr-only">Discord</span>
                             </a>
                         </li>
                         <li>

@@ -1,0 +1,21 @@
+#news {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 1rem;
+}
+
+#news h2 {
+  font-size: 2.5rem;
+  margin-bottom: .5rem;
+}
+
+.news-list-page {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#news p {
+    display: flex;
+    justify-content: center;
+}
