@@ -19,7 +19,7 @@ function NewsCard({ title, description, img }) {
 
     return (
     <div className="news-card" onClick={() => handleNewsClick()}>
-      <h2>{title}</h2>
+      <h3 className="news-title">{title}</h3>
       <img
             src={imgUrl}
             alt={"News Image"}

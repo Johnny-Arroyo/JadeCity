@@ -33,7 +33,7 @@ body {
     padding: 0;
     margin: 0;
     font-family: var(--primary-font);
-    background-image: url('../Public/img/JC(HighContrast).png');
+    background-image: url('../public/img/JC(HighContrast).png');
     background-attachment: fixed;
     background-size: cover;
     background-position: center 10%;

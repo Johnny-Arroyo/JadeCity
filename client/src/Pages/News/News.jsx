@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import NewsCard from '../../components/NewsCard/NewsCard';
-import styles from "./News.css"
+import './News.css'
 
 const News = (props) => {
     
