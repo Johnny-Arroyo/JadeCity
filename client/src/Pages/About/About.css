@@ -1,0 +1,85 @@
+#about {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    max-width: 750px;
+    margin: 2rem auto;
+    width: auto;
+    height: auto;
+    color: var(--secondary);
+}
+
+#about .aboutContainer {
+    margin: 0 1rem;
+    padding: 2rem;
+    background: rgba(121, 205, 204, 0.2);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border-radius: var(--comp-b-radius);
+    box-shadow: 0px 5px 5px 5px rgba(20, 36, 42, 0.4);
+    border: 1px solid rgba(121, 205, 204, 0.3);
+}
+
+#about .city {
+    display: flex;
+    justify-content: flex-start;
+    margin-right: auto;
+    padding-left: 0.5rem;
+    font-size: 3rem;
+    font-family: var(--primary-font);
+}
+
+#about p {
+    font-size: 2rem;
+    line-height: 1.5;
+    font-family: var(--secondary-font);
+    font-weight: 500;
+    text-align: justify;
+}
+
+#about .welcome {
+    font-family: var(--secondary-font);
+    font-size: 3rem;
+    padding: 0;
+    margin: 1rem 0 0 0;
+}
+
+#about .records {
+    font-family: var(--primary-font);
+    font-size: 5rem;
+    padding-left: 0.25rem;
+    color: var(--aqua);
+    display: block;
+    font-weight: 700;
+}
+
+@media (max-width: 480px) {
+    #about {
+        margin: 1rem 0 1rem 0;
+    }
+
+    #about .aboutContainer {
+        padding: 1.5rem;
+        margin: 1rem 1.5rem;
+    }
+
+    #about .welcome {
+        font-size: 70%;
+        margin: 0;
+    }
+
+    #about .city {
+        display: flex;
+        justify-content: flex-start;
+        margin-top: 0.25rem;
+        font-size: 1rem;
+    }
+
+    #about .records {
+        font-size: 2rem;
+    }
+
+    #about p {
+        font-size: 1rem;
+    }
+}
