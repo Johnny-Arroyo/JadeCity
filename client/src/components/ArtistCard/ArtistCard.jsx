@@ -32,9 +32,7 @@ const ArtistCard = ({ name, bio, img, inspiration, spotify }) => {
             onClick={handleArtistClick}
             style={{ cursor: 'pointer' }}>
             <img src={imgUrl} alt={`Photo of ${name}`} />
-            <div className="artist-info">
-                <h3 className="name">{name}</h3>
-            </div>
+            <h3 className="name">{name}</h3>
         </div>
     )
 }
