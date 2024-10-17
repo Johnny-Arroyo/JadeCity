@@ -48,7 +48,7 @@ h3,
 h4 {
     margin: 1rem 0 0 0;
     display: flex;
-    justify-content: center;  
+    justify-content: center;
 }
 
 img {
@@ -56,7 +56,7 @@ img {
 }
 
 a {
-    color: var(--primary);
+    color: var(--font-color);
 }
 
 a:hover {
@@ -64,25 +64,11 @@ a:hover {
     text-decoration: none;
 }
 
-.section-dkblue {
-    background-color: var(--secondary);
-}
-
-.gradient {
-    background: linear-gradient(
-        90deg,
-        var(--hover-color) 0%,
-        var(--tertiary) 100%
-    );
-    height: 2px;
-}
-
 /* intro styles */
 #about {
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
-    padding: 2rem;
     max-width: 750px;
     margin: 2rem auto;
     width: auto;
@@ -90,16 +76,27 @@ a:hover {
     color: var(--secondary);
 }
 
+#about .aboutContainer {
+    margin: 0 1rem;
+    padding: 2rem;
+    background-color: rgba(121, 205, 204, 0.2);
+    border-radius: var(--comp-b-radius);
+    box-shadow: -5px 5px 5px rgba(20, 36, 42, 0.5);
+}
+
 #about .City {
-  font-size: 3rem;
-  font-family: var(--primary-font);
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 0.5rem;
+    font-size: 3rem;
+    font-family: var(--primary-font);
 }
 
 #about p {
     font-size: 2rem;
     line-height: 1.5;
     font-family: var(--secondary-font);
-    font-weight:500;
+    font-weight: 500;
     text-align: justify;
 }
 
@@ -107,13 +104,13 @@ a:hover {
     font-family: var(--secondary-font);
     font-size: 3rem;
     padding: 0;
-    margin: 1rem 0 0 0
+    margin: 1rem 0 0 0;
 }
 
 #about .records {
     font-family: var(--primary-font);
     font-size: 5rem;
-    margin-left: 1rem;
+    padding-left: 0.25rem;
     color: var(--aqua);
     display: block;
     font-weight: 700;
@@ -128,16 +125,11 @@ a:hover {
 
 #artists h2 {
     font-size: 2.5rem;
-    margin-bottom: calc(2.5rem * 1.5);
+    margin-bottom: 1.5rem;
 }
 
 #artists h3 {
     color: var(--font-color);
-}
-
-#artists h4 {
-    font-size: 1rem;
-    font-family: var(--secondary-font);
 }
 
 #artists ul {
@@ -151,58 +143,49 @@ a:hover {
     font-size: 1rem;
 }
 
-.tech-used,
-.artist-bio {
-    padding: 0 1rem 0 0;
-}
-
-
-
 .artist-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 /* News */
 .news-card {
-  background-color: var(--secondary);
-  border-radius: 10px;
-  padding: 1rem;
-  margin: 1rem;
-  width: 100%;
-  max-width: 300px;
-  text-align: center;
+    background-color: var(--secondary);
+    border-radius: 10px;
+    padding: 1rem;
+    margin: 1rem;
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
 }
 
 .news-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .news-card:hover {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 .news-img {
-  width: 100%;
-  border-radius: 10px;
-  padding: 30px;
+    width: 100%;
+    border-radius: 10px;
+    padding: 30px;
 }
 
 .news-card-large {
-  width: 100%;
-  max-width: 600px;
+    width: 100%;
+    max-width: 600px;
 }
 
 .news-img-large {
-  width: 100%;
-  border-radius: 10px;
-  padding: 30px;
+    width: 100%;
+    border-radius: 10px;
+    padding: 30px;
 }
-
-
 
 /* navbar */
 .nav-background {
@@ -216,7 +199,7 @@ nav {
 }
 
 nav span {
-  font-size: 150%;
+    font-size: 150%;
 }
 
 nav h1 {
@@ -225,7 +208,7 @@ nav h1 {
     align-items: center;
     margin: 0;
     padding: 0;
-    font-size: 60%;
+    font-size: 40%;
 }
 
 nav h1 a {
@@ -268,7 +251,7 @@ nav [className*='fa-']:hover {
 }
 
 nav h1 [className*='fa-'] {
-    font-size: 100%;
+    font-size: 80%;
     color: var(--font-color);
     transition: 0.3s;
 }
@@ -312,7 +295,7 @@ footer ul {
     flex-flow: row wrap;
     justify-content: center;
     gap: 2rem;
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 @media (min-width: 480px) {
@@ -328,20 +311,14 @@ footer ul {
         gap: 2rem;
     }
 
-    nav ul li:nth-child(7),
+    nav ul li:nth-child(7), 
     nav ul li:nth-child(8),
-    nav ul li:nth-child(9) {
+    nav ul li:nth-child(9),
+    nav ul li:nth-child(10) {
         font-size: 60%;
         text-align: center;
         justify-content: center;
     }
-
-    article {
-        display: grid;
-        grid-template-columns: repeat(10, 1fr);
-        gap: 1rem;
-    }
-
 }
 
 @media (min-width: 850px) {
@@ -369,7 +346,7 @@ footer ul {
         flex: 0;
     }
 
-    nav li:nth-last-child(3) {
+    nav li:nth-last-child(4) {
         margin-left: auto;
     }
 }
@@ -413,7 +390,8 @@ footer ul {
 
     nav ul li:nth-child(7),
     nav ul li:nth-child(8),
-    nav ul li:nth-child(9) {
+    nav ul li:nth-child(9), 
+    nav ul li:nth-child(10) {
         font-size: 60%;
         flex-basis: calc(100% / 3);
         text-align: center;

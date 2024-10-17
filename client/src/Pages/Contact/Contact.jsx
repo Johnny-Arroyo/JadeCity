@@ -60,7 +60,7 @@ const Contact = () => {
                 return response.text() // Handle non-JSON responses
             })
             .then((data) => {
-                setSuccessMessage('Thank you for your sumbmission')
+                setSuccessMessage('Thank you for your submission!')
                 setFormData({
                     firstName: '',
                     lastName: '',
@@ -86,16 +86,17 @@ const Contact = () => {
     return (
         <div>
             <section id="contact">
+              <h2> Contact </h2>
                 <form
                     method="post"
                     encType="multipart/form-data"
-                    name="demoForm"
+                    className="demoForm"
                     id="demoForm"
                     acceptCharset="utf-8"
                     autoComplete="on"
                     onSubmit={handleSubmit}>
                     <div id="contactHeading">
-                        <h2>Submit Demos to Jade City</h2>
+                        <h3>Submit Demos to Jade City</h3>
                         <p>
                             We are excited to listen to your enchanted
                             tune!
@@ -180,13 +181,13 @@ const Contact = () => {
                         disabled={isSubmitting}>
                         {isSubmitting ? 'Submitting...' : 'Submit'}
                     </button>
-                </form>
-
                 {successMessage && (
                     <div className="successMessage">
                         {successMessage}
                     </div>
                 )}
+                </form>
+
             </section>
         </div>
     )
