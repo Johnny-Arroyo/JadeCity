@@ -3,6 +3,7 @@ import React from 'react'
 const About = () => {
     return (
         <section id="about">
+          <div className="aboutContainer">
             <p className="welcome">
                 Welcome to
                 <span className="records">JADE CITY,</span>
@@ -22,6 +23,7 @@ const About = () => {
                 every lyric a story, and every gathering a celebration
                 of the magic of friendship.
             </p>
+            </div>
         </section>
     )
 }

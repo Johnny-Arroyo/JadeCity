@@ -15,8 +15,8 @@ function ArtistCardLarge() {
                 src={imgUrl}
                 alt={`Photo of ${name}`}
             />
+            <h3>{name}</h3>
             <div className="artist-info-large">
-                <h3>{name}</h3>
                 <p>{bio}</p>
                 <p>
                     <strong>Inspiration:</strong> {inspiration}
