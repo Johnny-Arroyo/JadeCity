@@ -1,12 +1,12 @@
 #shop {
-    padding: 4rem 1rem;
+    padding: 2rem 1rem;
     margin: 0 auto;
     max-width: 1200px;
 }
 
 #shop h2 {
-  font-size: 2.5rem;
-  margin-bottom: .5rem;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
 }
 
 .shop-list {
@@ -17,4 +17,11 @@
 
 .loading {
     margin: auto;
+}
+
+@media (max-width: 480px) {
+    #shop {
+        padding: 0rem;
+        margin: 1rem 1.5rem;
+    }
 }

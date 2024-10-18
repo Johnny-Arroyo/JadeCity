@@ -9,7 +9,7 @@ const News = (props) => {
     return (
         <section id='news'>
             <h2>News</h2>
-            <p>
+            <p className='newsMsg'>
                 Stay tuned for the latest updates and news from Jade
                 City Records!
             </p>
