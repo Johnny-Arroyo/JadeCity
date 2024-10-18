@@ -46,7 +46,7 @@ h1,
 h2,
 h3,
 h4 {
-    margin: 1rem 0 0 0;
+    margin: 0;
     display: flex;
     justify-content: center;
 }
@@ -80,6 +80,12 @@ a:hover {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+}
+
+#news .newsHomeMsg {
+    display: flex;
+    justify-content: center;
+    text-align: center;
 }
 
 .news-card:hover {

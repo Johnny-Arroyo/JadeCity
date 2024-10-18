@@ -2,12 +2,12 @@
     display: flex;
     flex-direction: column;
     justify-items: center;
-    padding: 4rem 1rem;
-    margin: 0 auto;
     max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
 }
 
-#artists h2 {
+#artists .ourArtists {
     font-size: 2.5rem;
     margin-bottom: 1.5rem;
 }
@@ -32,13 +32,8 @@
 }
 
 @media (max-width: 480px) {
-  .artist-list {
-    margin: 0 2rem;
-  }
-}
-
-@media (max-width: 860px) {
-  .artist-list {
-    margin: 0 2rem;
-  }
+  #artists {
+      padding: 0rem;
+      margin: 1rem 1.5rem;
+    }
 }

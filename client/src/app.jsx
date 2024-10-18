@@ -7,7 +7,6 @@ import News from './Pages/News/News.jsx'
 import NewsBanner from './components/NewsBanner'
 import NewsCardLarge from './components/NewsCardLarge'
 import Artists from './Pages/Artists/Artists.jsx'
-import ArtistBanner from './components/ArtistCardLarge/ArtistBanner.jsx'
 import ArtistCardLarge from './components/ArtistCardLarge/ArtistCardLarge.jsx'
 import Shop from './Pages/Shop/Shop.jsx'
 import ContactForm from './Pages/Contact/Contact.jsx'
@@ -56,7 +55,7 @@ const App = () => {
                         <>
                             <About />
                             <NewsBanner news={news}/>
-                            <ArtistBanner artists={artists}/>
+                            <Artists artists={artists}/>
                             <Shop />
                             <ContactForm />
                         </>

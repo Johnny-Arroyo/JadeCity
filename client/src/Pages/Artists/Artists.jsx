@@ -9,7 +9,7 @@ const Artists = (props) => {
 
   return (
     <section id="artists">
-      <h2>Our Artists</h2>
+      <h2 className="ourArtists">Our Artists</h2>
       <div className="artist-list">
         {artists.map((artist, index) => (
           <ArtistCard
