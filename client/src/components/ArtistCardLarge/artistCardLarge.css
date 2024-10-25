@@ -1,0 +1,24 @@
+.artist-card-large {
+  margin: 4rem;
+  padding-bottom: 4rem;
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.artist-card-large h3 {
+  margin: 0;
+  padding: .5rem;
+  border-left: 2px solid var(--tertiary);
+  border-bottom: 2px solid var(--tertiary);
+  border-radius: 10px;
+}
+
+.artist-img-large {
+  width: 450px;
+  border-radius: 10px;
+}

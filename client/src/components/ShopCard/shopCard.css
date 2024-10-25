@@ -1,0 +1,29 @@
+.shop-card {
+  background-color: var(--secondary);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+  margin: 1rem;
+  width: 100%;
+  height: 100%;
+  max-width: 300px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.shop-card img {
+  border-radius: 8px;
+}
+
+.shop-card h3{
+  margin-top:.5rem;
+  margin-bottom: 2rem;
+}
+
+.shop-card p {
+  margin-top:auto;
+}
+
+
