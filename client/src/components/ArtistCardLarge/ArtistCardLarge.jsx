@@ -9,19 +9,13 @@ function ArtistCardLarge() {
 
     return (
         <div className="artist-card-large">
-            <div className="picName">
-                <img
-                    className="artist-img-large"
-                    src={imgUrl}
-                    alt={`Photo of ${name}`}
-                />
-                <h3>{name}</h3>
+            <div className="artist-img-large">
+                <img src={imgUrl} alt={`Photo of ${name}`} />
             </div>
             <div className="artist-info-large">
-                <p>{bio}</p>
-                <p>
-                    <strong>Inspiration:</strong> {inspiration}
-                </p>
+                <h3>{name}</h3>
+                <p className="bio">{bio}</p>
+                <p>Inspiration: {inspiration}</p>
             </div>
             <div className="spotify">
                 <iframe
