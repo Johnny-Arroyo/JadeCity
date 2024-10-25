@@ -33,7 +33,7 @@ body {
     padding: 0;
     margin: 0;
     font-family: var(--primary-font);
-    background-image: url('../Public/img/JC(HighContrast).png');
+    background-image: url('../public/img/JC(HighContrast).png');
     background-attachment: fixed;
     background-size: cover;
     background-position: center 10%;
@@ -64,49 +64,91 @@ a:hover {
     text-decoration: none;
 }
 
-/* News */
-.news-card {
-    background-color: var(--secondary);
-    border-radius: 10px;
-    padding: 1rem;
-    margin: 1rem;
-    width: 100%;
-    max-width: 300px;
-    text-align: center;
-    box-shadow: 0px 5px 5px 5px rgba(20, 36, 42, 0.4);
+/* intro styles */
+#about {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    max-width: 750px;
+    margin: 2rem auto;
+    width: auto;
+    height: auto;
+    color: var(--secondary);
 }
 
-.news-list {
+#about .aboutContainer {
+    margin: 0 1rem;
+    padding: 2rem;
+    background-color: rgba(121, 205, 204, 0.2);
+    border-radius: var(--comp-b-radius);
+    box-shadow: -5px 5px 5px rgba(20, 36, 42, 0.5);
+}
+
+#about .City {
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 0.5rem;
+    font-size: 3rem;
+    font-family: var(--primary-font);
+}
+
+#about p {
+    font-size: 2rem;
+    line-height: 1.5;
+    font-family: var(--secondary-font);
+    font-weight: 500;
+    text-align: justify;
+}
+
+#about .welcome {
+    font-family: var(--secondary-font);
+    font-size: 3rem;
+    padding: 0;
+    margin: 1rem 0 0 0;
+}
+
+#about .records {
+    font-family: var(--primary-font);
+    font-size: 5rem;
+    padding-left: 0.25rem;
+    color: var(--aqua);
+    display: block;
+    font-weight: 700;
+}
+
+/* artists */
+#artists {
+    padding: 4rem 1rem;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+#artists h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+#artists h3 {
+    color: var(--font-color);
+}
+
+#artists ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    gap: 1rem;
+    font-size: 1rem;
+}
+
+.artist-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
-#news .newsHomeMsg {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-}
-
-.news-card:hover {
-    cursor: pointer;
-}
-
-.news-img {
-    width: 100%;
-    border-radius: 10px;
-}
-
-.news-card-large {
-    width: 100%;
-    max-width: 600px;
-}
-
-.news-img-large {
-    width: 100%;
-    border-radius: 10px;
-    padding: 30px;
-}
 
 /* navbar */
 .nav-background {
