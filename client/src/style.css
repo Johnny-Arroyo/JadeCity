@@ -33,7 +33,7 @@ body {
     padding: 0;
     margin: 0;
     font-family: var(--primary-font);
-    background-image: url('../Public/img/JC(HighContrast).png');
+    background-image: url('../public/img/JC(HighContrast).png');
     background-attachment: fixed;
     background-size: cover;
     background-position: center 10%;
@@ -149,43 +149,6 @@ a:hover {
     justify-content: center;
 }
 
-/* News */
-.news-card {
-    background-color: var(--secondary);
-    border-radius: 10px;
-    padding: 1rem;
-    margin: 1rem;
-    width: 100%;
-    max-width: 300px;
-    text-align: center;
-}
-
-.news-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.news-card:hover {
-    cursor: pointer;
-}
-
-.news-img {
-    width: 100%;
-    border-radius: 10px;
-    padding: 30px;
-}
-
-.news-card-large {
-    width: 100%;
-    max-width: 600px;
-}
-
-.news-img-large {
-    width: 100%;
-    border-radius: 10px;
-    padding: 30px;
-}
 
 /* navbar */
 .nav-background {
