@@ -17,7 +17,7 @@ const NewsBanner = (props) => {
                     />
                 ))}
             </div>
-            <p className="newsHomeMsg">
+            <p className="newsMsg">
                 Stay tuned for the latest updates and news from Jade
                 City Records!
             </p>

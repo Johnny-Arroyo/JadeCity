@@ -27,7 +27,7 @@
 
 .artist-list {
   columns: 18rem;
-  gap: .5rem;
+  gap: .25rem;
   counter-reset: grid;
 }
 
