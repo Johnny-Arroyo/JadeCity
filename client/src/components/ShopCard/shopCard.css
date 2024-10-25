@@ -27,4 +27,8 @@
   margin-top:auto;
 }
 
+.shop-card:hover {
+  cursor: pointer;
+  color: var(--hover-color);
+}
 
