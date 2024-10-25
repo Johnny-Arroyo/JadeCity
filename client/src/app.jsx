@@ -1,16 +1,14 @@
 import React, {useState, useEffect} from 'react'
-import ScrollToTop from './utils/scrollToTop.jsx'
 
 import NavBar from './components/NavBar'
 import About from './Pages/About'
-import News from './Pages/News/News.jsx'
-import NewsBanner from './components/NewsCard/NewsBanner'
-import NewsCardLarge from './components/NewsCard/NewsCardLarge'
+import News from './Pages/News'
+import NewsBanner from './components/NewsBanner'
+import NewsCardLarge from './components/NewsCardLarge'
 import Artists from './Pages/Artists'
-import ArtistBanner from './components/ArtistCardLarge/ArtistBanner.jsx'
-import ArtistCardLarge from './components/ArtistCardLarge/ArtistCardLarge.jsx'
-import Shop from './Pages/Shop/Shop.jsx'
-import ContactForm from './Pages/Contact/Contact.jsx'
+import ArtistCardLarge from './components/ArtistCardLarge'
+import Shop from './Pages/Shop'
+import ContactForm from './Pages/Contact'
 import Footer from './components/Footer'
 import { fetchAPIData } from './utils/fetchAPIData.js';
 
@@ -49,14 +47,13 @@ const App = () => {
     return (
         <div>
             <Router>
-              <ScrollToTop />
                 <NavBar />
                 <Routes>
                     <Route path="/" element={
                         <>
                             <About />
                             <NewsBanner news={news}/>
-                            <ArtistBanner artists={artists}/>
+                            <Artists artists={artists}/>
                             <Shop />
                             <ContactForm />
                         </>

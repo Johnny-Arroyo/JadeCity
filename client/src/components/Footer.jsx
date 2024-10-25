@@ -32,17 +32,6 @@ const Footer = () => {
                 </li>
                 <li>
                     <a
-                        className="discord"
-                        href="https://discord.gg/jxNq7RSH"
-                        target="_blank">
-                        <span
-                            className="fa-brands fa-discord"
-                            aria-hidden="true"></span>
-                        <span className="sr-only">Discord</span>
-                    </a>
-                </li>
-                <li>
-                    <a
                         className="instagram"
                         href="https://www.instagram.com/jadecityrecords/"
                         target="_blank"
