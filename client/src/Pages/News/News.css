@@ -1,12 +1,12 @@
 #news {
-    padding: 4rem 1rem;
-    margin: 0 auto;
     max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 1rem;
 }
 
 #news h2 {
-    font-size: 2.5rem;
-    margin-bottom: calc(2.5rem * 1.5);
+  font-size: 2.5rem;
+  margin-bottom: .5rem;
 }
 
 .news-list-page {

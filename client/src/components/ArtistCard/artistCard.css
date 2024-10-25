@@ -1,25 +1,25 @@
 .artist-card {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center; /* Centers the content horizontally */
-  background-color: var(--secondary);
-  border: 1px solid var(--primary);
-  padding: 1rem;
-  margin: 0;
-  width: 100%;
-  max-width: 300px;
-  min-height: 450px; /* Ensures all cards have the same height */
-  text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center; /* Centers the content horizontally */
+    background-color: var(--secondary);
+    padding: 1rem;
+    margin: 1px;
+    width: 100%;
+    max-width: 300px;
+    min-height: 450px;
+    border-radius: var(--comp-b-radius);
+    text-align: center;
 }
 
 .artist-card img {
-  border-radius: 8px;
-  margin-bottom: auto;
+    margin-bottom: auto;
+    border-radius: 8px;
 }
 
 .artist-card .name {
-  margin: 0;
-  margin-top: auto;
-  padding-bottom: 1rem;
+    margin: 0;
+    margin-top: auto;
+    padding-bottom: 1rem;
 }
