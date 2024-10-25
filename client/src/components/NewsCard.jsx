@@ -1,6 +1,5 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom';
-import './NewsCard.css'
 
 function NewsCard({ title, description, img }) {
   
@@ -19,7 +18,7 @@ function NewsCard({ title, description, img }) {
 
     return (
     <div className="news-card" onClick={() => handleNewsClick()}>
-      <h3 className="news-title">{title}</h3>
+      <h2>{title}</h2>
       <img
             src={imgUrl}
             alt={"News Image"}

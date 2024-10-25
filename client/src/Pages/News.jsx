@@ -1,19 +1,17 @@
 import React, { useEffect, useState } from 'react';
-import NewsCard from '../../components/NewsCard/NewsCard';
-import './News.css'
+import NewsCard from '../components/NewsCard';
 
 const News = (props) => {
     
     const news = props.news || []; 
 
     return (
-        <section id='news'>
-            <h2>News</h2>
+        <div className='news'>
+            <h1>All News</h1>
             <p>
                 Stay tuned for the latest updates and news from Jade
                 City Records!
             </p>
-            <div className="news-list-page">
             {
             news.map((news, index) => (
                     <NewsCard
@@ -23,8 +21,7 @@ const News = (props) => {
                         img={news[2]}
                     />
             ))}
-            </div>
-        </section>
+        </div>
     )
 };
 
