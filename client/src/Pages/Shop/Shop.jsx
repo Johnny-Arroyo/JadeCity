@@ -57,10 +57,10 @@ const Shop = () => {
     const {data: products, status, refetch} = useQuery( // caching the products we randomly selected
         'shop', // query Key
         getShopData, // query function
-        { 
-            staleTime: 1000 * 60 * 15, // cache is stale only after 15 minutes
-            refetchOnWindowFocus: false // if switch tabs and come back, will not refetch
-        } 
+        // { 
+        //     staleTime: 1000 * 60 * 15, // cache is stale only after 15 minutes
+        //     refetchOnWindowFocus: false // if switch tabs and come back, will not refetch
+        // } 
         
     );
 
