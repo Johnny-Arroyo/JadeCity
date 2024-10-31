@@ -37,4 +37,4 @@ const ArtistCard = ({ name, bio, img, inspiration, spotify }) => {
     )
 }
 
-export default ArtistCard
+export default ArtistCard;
