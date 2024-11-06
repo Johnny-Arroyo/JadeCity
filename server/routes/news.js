@@ -8,7 +8,7 @@ router.get('/', async (req, res) => {
     const { default: fetch } = await import('node-fetch'); // Use dynamic import
     const sheetId = process.env.GOOGLE_SHEET_ID;
     const apiKey = process.env.GOOGLE_SHEETS_API_KEY;
-    const range = 'Sheet2!A2:C'; // Adjust as necessary
+    const range = 'News!A2:C'; // Adjust as necessary
 
     const response = await fetch(`https://sheets.googleapis.com/v4/spreadsheets/${sheetId}/values/${range}?key=${apiKey}`);
     if (!response.ok) {
