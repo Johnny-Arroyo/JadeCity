@@ -5,14 +5,14 @@ import './NewsCard.css'
 function NewsCardLarge() {
 
     const location = useLocation();
-    const { title, description, imgUrl } = location.state; // get title, description, img from the card we clicked on in NewsCard
+    const { title, description, img } = location.state; // get title, description, img from the card we clicked on in NewsCard
 
     return (
         <section id="news-large">
             <div className="news-card-large" onClick={() => handleNewsClick()}>
                 <h2 className='news-title-large'>{title}</h2>
                 <img
-                        src={imgUrl}
+                        src={img}
                         alt={"News Image"}
                         className="news-img-large"
                 />

@@ -4,13 +4,14 @@ import styles from './artistCardLarge.css'
 
 function ArtistCardLarge() {
     const location = useLocation()
-    const { name, bio, imgUrl, inspiration, spotifyUrl } =
+    const { name, bio, img, inspiration, spotifyUrl } =
         location.state
+
 
     return (
         <div className="artist-card-large">
             <div className="artist-img-large">
-                <img src={imgUrl} alt={`Photo of ${name}`} />
+                <img src={img} alt={`Photo of ${name}`} />
             </div>
             <div className="artist-info-large">
                 <h3>{name}</h3>
@@ -30,4 +31,4 @@ function ArtistCardLarge() {
     )
 }
 
-export default ArtistCardLarge
+export default ArtistCardLarge;

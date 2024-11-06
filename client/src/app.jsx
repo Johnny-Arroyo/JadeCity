@@ -11,65 +11,41 @@ import ArtistCardLarge from './components/ArtistCardLarge/ArtistCardLarge.jsx'
 import Shop from './Pages/Shop/Shop.jsx'
 import ContactForm from './Pages/Contact/Contact.jsx'
 import Footer from './components/Footer'
-import { fetchAPIData } from './utils/fetchAPIData.js';
 
-import {
-    BrowserRouter as Router,
-    Routes,
-    Route,
-} from "react-router-dom";
+import { QueryClient, QueryClientProvider } from 'react-query'
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 
 const App = () => {
 
-
-    const [artists, setArtists] = useState([]);
-    const [news, setNews] = useState([]);
-  
-    useEffect(() => { 
-        const getArtists = async () => {
-            const data = await fetchAPIData('artists'); // make api calls just once
-            setArtists(data);
-        };
-
-        getArtists();
-    }, []);
-
-    useEffect(() => {
-        const getNews = async () => {
-            const data = await fetchAPIData('news');
-            setNews(data);
-        };
-
-        getNews();
-        
-    }, []);
-
+    const queryClient = new QueryClient(); // every child component will be able to fetch data with this with useQuery
 
     return (
         <div>
-            <Router>
-              <ScrollToTop />
-                <NavBar />
-                <Routes>
-                    <Route path="/" element={
-                        <>
-                            <About />
-                            <NewsBanner news={news}/>
-                            <Artists artists={artists}/>
-                            <Shop />
-                            <ContactForm />
-                        </>
+            <QueryClientProvider client={queryClient}>
+                <Router>
+                    <ScrollToTop />
+                    <NavBar />
+                    <Routes>
+                        <Route path="/" element={
+                            <>
+                                <About />
+                                <NewsBanner />
+                                <Artists />
+                                <Shop />
+                                <ContactForm />
+                            </>
                         } />
-                    <Route path="/About" element={<About />} />
-                    <Route path="/News" element={<News news={news}/>} />
-                    <Route path="/News/:title" element={<NewsCardLarge/>} />
-                    <Route path="/Artists" element={<Artists artists={artists}/>} />
-                    <Route path="/Artists/:name" element={<ArtistCardLarge />} />
-                    <Route path="/Shop" element={<Shop />} />
-                    <Route path="/Contact" element={<ContactForm />} />
-                </Routes>
-                <Footer />
-            </Router>
+                        <Route path="/About" element={<About />} />
+                        <Route path="/News" element={<News />} />
+                        <Route path="/News/:title" element={<NewsCardLarge/>} />
+                        <Route path="/Artists" element={<Artists />} />
+                        <Route path="/Artists/:name" element={<ArtistCardLarge />} />
+                        <Route path="/Shop" element={<Shop />} />
+                        <Route path="/Contact" element={<ContactForm />} />
+                    </Routes>
+                    <Footer />
+                </Router>
+            </QueryClientProvider>
         </div>
     )
 }
