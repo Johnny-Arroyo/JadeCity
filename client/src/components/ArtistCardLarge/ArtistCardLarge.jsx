@@ -30,4 +30,4 @@ function ArtistCardLarge() {
     )
 }
 
-export default ArtistCardLarge
+export default ArtistCardLarge;
