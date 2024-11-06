@@ -64,6 +64,7 @@ const Shop = () => {
     return (
         <section id="shop">
             <h2>Shop</h2>
+            <h3>Jade City Merch</h3>
             <div className="shop-list">
                 {products.length > 0 ? (
                     products.map((product) => (
@@ -80,6 +81,21 @@ const Shop = () => {
                         <p>Loading Merch...</p>
                     </div>
                 )}
+            </div>
+            <h3>Firefly Laser Shop</h3>
+            <div className="fireflyCard">
+                <div style={{ cursor: 'pointer' }}>
+                    <a
+                        href="https://fireflylaserlights.square.site/product/jade-city-lamp/36?cp=true&sa=true&sbp=false&q=false"
+                        target="_blank">
+                        <img
+                            src="https://via.placeholder.com/150"
+                            alt="photo of Jade City Lamp"
+                        />
+                    </a>
+                    <p>Jade City Desk Lamp</p>
+                    <p>$50</p>
+                </div>
             </div>
         </section>
     )
