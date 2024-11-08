@@ -6,7 +6,7 @@
 
 #shop h2 {
     font-size: 2.5rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 2rem;
 }
 
 .shop-list {
@@ -16,7 +16,10 @@
 }
 
 .loading {
-    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 2rem auto ;
 }
 
 @media (max-width: 480px) {
@@ -24,4 +27,47 @@
         padding: 0rem;
         margin: 1rem 1.5rem;
     }
+}
+
+.firefly-card {
+  background-color: var(--secondary);
+  border-radius: 10px;
+  padding: 1rem;
+  margin: 1rem auto;
+  width: 100%;
+  height: 100%;
+  max-width: 300px;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0px 5px 5px 5px rgba(20, 36, 42, 0.4);
+}
+
+.firefly-card h3{
+  margin-top:.5rem;
+  margin-bottom: 2rem;
+}
+
+.firefly-card img {
+
+  border-radius: 8px;
+}
+
+.firefly-card h4{
+  margin-top:.5rem;
+  margin-bottom: 2rem;
+}
+
+
+.firefly-card .price {
+  margin-top: auto;
+}
+
+.firefly-card a {
+  text-decoration: none
+}
+
+.firefly-card:hover {
+  cursor: pointer;
+  color: var(--hover-color);
+  text-decoration: underline;
 }

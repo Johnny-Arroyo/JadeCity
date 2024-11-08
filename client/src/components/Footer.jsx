@@ -33,7 +33,7 @@ const Footer = () => {
                 <li>
                     <a
                         className="discord"
-                        href="https://discord.gg/jxNq7RSH"
+                        href="https://discord.gg/GhG5D8qhyv"
                         target="_blank">
                         <span
                             className="fa-brands fa-discord"
