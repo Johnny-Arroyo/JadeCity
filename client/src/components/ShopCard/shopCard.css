@@ -30,5 +30,6 @@
 .shop-card:hover {
   cursor: pointer;
   color: var(--hover-color);
+  text-decoration: underline;
 }
 

@@ -1,6 +1,7 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const NodePolyfillPlugin = require('node-polyfill-webpack-plugin')
+const CopyPlugin = require('copy-webpack-plugin')
 
 module.exports = {
     entry: './client/src/index.jsx', // Entry point of your React app
@@ -53,6 +54,17 @@ module.exports = {
             template: './client/public/index.html', // Point to your HTML template
             filename: 'index.html',
         }),
-        new NodePolyfillPlugin()
+        new NodePolyfillPlugin(),
+        new CopyPlugin({
+            patterns: [
+                {
+                    from: path.resolve(
+                        __dirname,
+                        'client/public/img/FireflyLaser.jpg'
+                    ),
+                    to: 'static/images', // Output directory in `dist`
+                },
+            ],
+        }),
     ],
 }
