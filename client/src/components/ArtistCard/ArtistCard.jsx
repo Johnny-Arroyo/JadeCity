@@ -1,6 +1,6 @@
 // src/components/ArtistCard.js
 import React from 'react'
-import styles from './artistCard.css'
+import './artistCard.css'
 
 // Alternate way to use Cloudinary for more control over image options
 // import { Cloudinary } from '@cloudinary/url-gen';

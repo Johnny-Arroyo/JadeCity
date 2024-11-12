@@ -33,3 +33,8 @@
   text-decoration: underline;
 }
 
+@media (max-width: 695px) {
+  .shop-card {
+    margin: .25rem 1rem;
+  }
+}

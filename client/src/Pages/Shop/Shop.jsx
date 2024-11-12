@@ -96,7 +96,7 @@ const Shop = () => {
                     />
                 ))}
             </div>
-            <h3>Firefly Laser Shop</h3>
+            <h3 className="firefly-shop">Firefly Laser Shop</h3>
             <div className="firefly-card">
                 <a
                     href="https://fireflylaserlights.square.site/product/jade-city-lamp/36?cp=true&sa=true&sbp=false&q=false"

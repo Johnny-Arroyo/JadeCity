@@ -26,14 +26,21 @@
 } */
 
 .artist-list {
-  columns: 18rem;
-  gap: .25rem;
-  counter-reset: grid;
+    columns: 18rem;
+    gap: 0.25rem;
+    counter-reset: grid;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 903px) {
   #artists {
-      padding: 0rem;
-      margin: 1rem 1.5rem;
-    }
+    max-width: 720px;
+  }
 }
+
+@media (max-width: 611px) {
+  #artists {
+    max-width: 380px;
+  }
+}
+
+

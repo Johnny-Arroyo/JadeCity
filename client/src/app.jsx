@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import ScrollToTop from './utils/scrollToTop.jsx'
 
-import NavBar from './components/NavBar'
+import NavBar from './components/NavBar/NavBar.jsx'
 import About from './Pages/About/About.jsx'
 import News from './Pages/News/News.jsx'
 import NewsBanner from './components/NewsCard/NewsBanner'
