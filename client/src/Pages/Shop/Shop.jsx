@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { fetchAPIData } from '../../utils/fetchAPIData'
 import ShopCard from '../../components/ShopCard/ShopCard'
+import FireflyCard from '../../components/ShopCard/FireflyCard'
 import styles from './Shop.css'
 import { useQuery } from 'react-query'
 
@@ -97,21 +98,8 @@ const Shop = () => {
                 ))}
             </div>
             <h3 className="firefly-shop">Firefly Laser Shop</h3>
-            <div className="firefly-card">
-                <a
-                    href="https://fireflylaserlights.square.site/product/jade-city-lamp/36?cp=true&sa=true&sbp=false&q=false"
-                    target="_blank"
-                    rel="noopener noreferrer">
-                    <img
-                        src="/static/images/FireflyLaser.jpg"
-                        alt="photo of Jade City Lamp"
-                        className="firefly-image"
-                    />
-                    <div className="firefly-details">
-                        <h4>Jade City Desk Lamp</h4>
-                        <p className="price">$50</p>
-                    </div>
-                </a>
+            <div>
+              <FireflyCard/>
             </div>
         </section>
     )
