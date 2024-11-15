@@ -3,7 +3,8 @@
     justify-content: flex-start;
     flex-wrap: wrap;
     max-width: 750px;
-    margin: 2rem auto;
+    margin: 5.5rem auto;
+    margin-bottom: 2rem;
     width: auto;
     height: auto;
     color: var(--secondary);
@@ -11,7 +12,7 @@
 
 #about .aboutContainer {
     margin: 0 1rem;
-    padding: 2rem;
+    padding: 1rem 2rem 2rem 2rem;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
@@ -55,12 +56,12 @@
 
 @media (max-width: 480px) {
     #about {
-        margin: 1rem 0 1rem 0;
+        margin: 5.5rem 0 1rem 0;
     }
 
     #about .aboutContainer {
         padding: 1.5rem;
-        margin: 1rem 1.5rem;
+        margin: 0 1.5rem;
     }
 
     #about .welcome {
