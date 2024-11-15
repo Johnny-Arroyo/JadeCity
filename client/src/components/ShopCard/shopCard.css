@@ -1,40 +1,83 @@
 .shop-card {
-  background-color: var(--secondary);
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 1rem;
-  margin: 1rem;
-  width: 100%;
-  height: 100%;
-  max-width: 300px;
-  text-align: center;
-  cursor: pointer;
-  box-shadow: 0px 5px 5px 5px rgba(20, 36, 42, 0.4);
+    background-color: var(--secondary);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem;
+    margin: 1rem;
+    width: 100%;
+    height: 100%;
+    max-width: 300px;
+    min-height: 400px;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0px 5px 5px 5px rgba(20, 36, 42, 0.4);
+    transition: 0.2s ease;
 }
 
 .shop-card img {
-  border-radius: 8px;
+    border-radius: 8px;
 }
 
-.shop-card h3{
-  margin-top:.5rem;
-  margin-bottom: 2rem;
+.shop-card h4 {
+    width: 80%;
+    margin: 0.5rem auto;
 }
 
-.shop-card p {
-  margin-top:auto;
+.shop-card .price {
+    margin-top: auto;
 }
 
 .shop-card:hover {
-  cursor: pointer;
-  color: var(--hover-color);
-  text-decoration: underline;
+    cursor: pointer;
+    color: var(--hover-color);
+    text-decoration: underline;
 }
 
 @media (max-width: 695px) {
-  .shop-card {
-    margin: .25rem 1rem;
-  }
+    .shop-card {
+        margin: 0.25rem 1rem;
+    }
+}
+
+.firefly-card {
+    background-color: var(--secondary);
+    border-radius: 10px;
+    padding: 1rem;
+    margin: 1rem auto;
+    width: 100%;
+    height: 100%;
+    max-width: 300px;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0px 5px 5px 5px rgba(20, 36, 42, 0.4);
+    transition: 0.2s ease;
+}
+
+h3.firefly-shop {
+    margin: 2rem 0 1rem 0;
+}
+
+.firefly-card img {
+    border-radius: 8px;
+}
+
+.firefly-card h4 {
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.firefly-card .price {
+    margin-top: auto;
+}
+
+.firefly-card a {
+    text-decoration: none;
+}
+
+.firefly-card:hover {
+    cursor: pointer;
+    color: var(--hover-color);
+    text-decoration: underline;
 }

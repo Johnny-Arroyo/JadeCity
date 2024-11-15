@@ -2,7 +2,7 @@
 fieldset {
     border: 1px var(--font-color); /* Removes the default border */
     padding: 0 0 1rem 0; /* Removes any padding */
-    font-size: 1em; /* You can adjust this to your needs */
+    font-size: 1rem; /* You can adjust this to your needs */
 }
 
 #contact {
@@ -41,6 +41,23 @@ fieldset {
     font-size: 1rem;
     margin: 0;
     padding: 0.5rem;
+}
+
+.submit {
+    background-color: var(--tertiary);
+    color: var(--secondary);
+    padding: 0.5rem;
+    margin: 1rem;
+    border-radius: 0.5rem;
+    font-family: var(--secondary-font);
+    text-decoration: none;
+    transition: 0.2s ease;
+}
+
+.submit:hover {
+    color: var(--font-color);
+    background-color: var(--hover-color);
+    box-shadow: 0 0 25px 1px rgba(255, 23, 228, 0.5);
 }
 
 .additionalInfo {

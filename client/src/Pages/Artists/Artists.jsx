@@ -19,7 +19,7 @@ const Artists = () => {
   );
 
   if(status === 'loading'){ // style loading
-      return <p>Loading...</p>;
+      return <p></p>;
   } 
 
   if(status === 'error'){ // if it fails, will retry 3 times before giving this error
