@@ -9,6 +9,10 @@
     margin-bottom: 1.5rem;
 }
 
+#shop h3{
+  margin: 1.74rem 0 1rem 0;
+}
+
 .shop-list {
     display: flex;
     flex-wrap: wrap;
