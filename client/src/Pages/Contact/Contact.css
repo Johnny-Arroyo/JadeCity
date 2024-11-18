@@ -6,14 +6,14 @@ fieldset {
 }
 
 #contact {
-    padding: 2rem 1rem;
-    margin: 0 auto;
+    margin: 5.5rem auto;
     max-width: 1200px;
+    margin-bottom: 2rem;
 }
 
 #contact h2 {
     font-size: 2.5rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
 }
 
 #contact .demoForm {
@@ -70,7 +70,7 @@ fieldset {
 @media (max-width: 480px) {
     #contact {
         padding: 0rem;
-        margin: 1rem 1.5rem;
+        margin: 5.5rem 1.5rem;
     }
     #contact .demoForm {
         margin: 1rem 1rem;

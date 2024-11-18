@@ -1,6 +1,10 @@
 /* Navbar Background */
 .nav-background {
     background-color: var(--secondary);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    margin-bottom: 2rem;
     box-shadow: 0px 2px 5px 2px rgba(20, 36, 42, 0.4);
     z-index: 20;
 }
@@ -22,6 +26,7 @@ nav {
     flex: 1;
     display: flex;
     justify-content: flex-start;
+    gap: .5rem
 }
 
 /* Centered Navigation Links */
@@ -115,13 +120,13 @@ nav .jade-city-records {
 }
 
 .hamburger-wrapper {
-  display: block;
-  align-content: center;
-  justify-items: center;
-  padding: 5px; /* Add some padding to make the border surrounding the hamburger icon */
-  cursor: pointer;
-  z-index: 20;
-  transition: border-color 0.3s ease; /* Optional smooth transition for border color */
+    display: block;
+    align-content: center;
+    justify-items: center;
+    /* padding: 5px; */
+    cursor: pointer;
+    z-index: 20;
+    transition: border-color 0.3s ease; /* Optional smooth transition for border color */
 }
 
 .hamburger-wrapper span {
@@ -141,7 +146,7 @@ nav .jade-city-records {
 }
 
 .hamburger-wrapper:hover span {
-  background-color: var(--hover-color)
+    background-color: var(--hover-color);
 }
 
 .hamburger-wrapper span:nth-child(even) {
@@ -218,68 +223,102 @@ nav .jade-city-records {
 /*Nav Drawer*/
 /* Hide nav-drawer by default */
 .nav-drawer {
-    position: fixed;
-    top: 0;
-    right: -300px; /* Positioned off-screen initially */
-    width: 125px;
-    height: 100%;
-    background: rgba(20, 36, 42, 0.4);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
-    border-left: thick double rgba(121, 205, 204, 0.1);;
-    z-index: 10;
-    transition: right 0.3s ease;
+  position: fixed;
+  top: 0;
+  right: -300px; /* Positioned off-screen initially */
+  width: 150px; /* Adjusted for better content fit */
+  height: 100%;
+  background: rgba(20, 36, 42, 0.4);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+  border-left: thick double rgba(121, 205, 204, 0.1);
+  z-index: 10;
+  transition: right 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Ensures social links are at the bottom */
+  padding: 2rem 1rem;
 }
 
 .nav-drawer.open {
-    right: 0; /* Slide the drawer in when open */
+  right: 0; /* Slide the drawer in when open */
 }
 
-.nav-drawer ul {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    padding-top: 5rem;
-    margin-left: auto;
-    margin-right: 2rem;
-    list-style: none;
+.nav-drawer ul.nav-links {
+  display: flex;
+  flex-direction: column; /* Align nav links in a single column */
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 6rem;
+  padding: 0;
+  list-style: none;
 }
 
-.nav-drawer li {
-    margin-bottom: 1rem 0;
+.nav-drawer ul.nav-links li {
+  margin-bottom: 1.5rem; /* Space between nav links */
 }
 
-.nav-drawer a {
-    text-decoration: none;
-    color: var(--font-color);
-    font-size: 1.5rem;
-    transition: color 0.2s ease;
+.nav-drawer ul.nav-links a {
+  text-decoration: none;
+  color: var(--font-color);
+  font-size: 1.5rem;
+  font-weight: 400;
+  transition: color 0.2s ease;
 }
 
-.nav-drawer a:hover {
-    color: var(--hover-color);
+.nav-drawer ul.nav-links a:hover {
+  color: var(--hover-color);
 }
 
-/* Hide nav-links and show hamburger below 850px */
+/* Social Links Section */
+.nav-drawer ul.social-links {
+  display: grid;
+  grid-template-columns: repeat(2, 40px); /* 2x2 grid */
+  gap: 1rem; /* Space between social links */
+  justify-content: center;
+  list-style: none;
+  margin-bottom: 1rem;
+}
+
+.nav-drawer ul.social-links li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px; /* Fixed width */
+  height: 40px; /* Fixed height */
+}
+
+.nav-drawer ul.social-links li a {
+  font-size: 1.5rem; /* Adjust icon size */
+  color: var(--font-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%; /* Ensure full area is clickable */
+  height: 100%; /* Ensure full area is clickable */
+  transition: color 0.2s ease, background 0.2s ease;
+}
+
+.nav-drawer ul.social-links li a:hover {
+  color: var(--hover-color);
+}
+
+/* Responsive Adjustments */
 @media (max-width: 849px) {
-    /* Hide nav-links initially */
-    .nav-links {
-        display: none;
-    }
+  .nav-links {
+      display: none; /* Hidden initially */
+  }
 
-    /*Hide social-links below 850px*/
-    .social-links {
-        display: none;
-    }
+  .social-links {
+      display: none; /* Hidden initially */
+  }
 
-    /* Display nav-links when open */
-    .nav-drawer.open {
-        display: flex;
-    }
+  .nav-drawer.open {
+      display: flex;
+  }
 
-    /* Show hamburger button */
-    .hamburger {
-        display: flex;
-    }
+  .hamburger {
+      display: flex; /* Show hamburger button */
+  }
 }

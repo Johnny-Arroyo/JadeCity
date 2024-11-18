@@ -147,7 +147,7 @@ const NavBar = () => {
                         className={`nav-drawer ${
                             menuOpen ? 'open' : ''
                         }`}>
-                        <ul role="list">
+                        <ul className="nav-links" role="list">
                             <li>
                                 <Link
                                     to="/about"
@@ -182,6 +182,52 @@ const NavBar = () => {
                                     onClick={handleLinkClick}>
                                     contact
                                 </Link>
+                            </li>
+                        </ul>
+                        <ul className="social-links" role="list">
+                            <li>
+                                <a
+                                    className="spotify"
+                                    href="https://open.spotify.com/playlist/6VVSzRxczOu431YRU941YD?si=1c97cf7f19ed4dde&nd=1&dlsi=4087f4d648d4414d"
+                                    target="_blank"
+                                    aria-label="Spotify">
+                                    <span
+                                        className="fa-brands fa-spotify"
+                                        aria-hidden="true"></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    className="youtube"
+                                    href="https://www.youtube.com/@JadeCityRecords"
+                                    target="_blank"
+                                    aria-label="YouTube">
+                                    <span
+                                        className="fa-brands fa-youtube"
+                                        aria-hidden="true"></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    className="discord"
+                                    href="https://discord.gg/GhG5D8qhyv"
+                                    target="_blank"
+                                    aria-label="Discord">
+                                    <span
+                                        className="fa-brands fa-discord"
+                                        aria-hidden="true"></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    className="instagram"
+                                    href="https://www.instagram.com/jadecityrecords/"
+                                    target="_blank"
+                                    aria-label="Instagram">
+                                    <span
+                                        className="fa-brands fa-instagram"
+                                        aria-hidden="true"></span>
+                                </a>
                             </li>
                         </ul>
                     </div>
