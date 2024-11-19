@@ -2,7 +2,7 @@
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
-    max-width: 750px;
+    max-width: 800px;
     margin: 6.5rem auto;
     margin-bottom: 2rem;
     width: auto;
@@ -25,7 +25,6 @@
     display: flex;
     justify-content: flex-start;
     margin-right: auto;
-    padding-left: 0.5rem;
     font-size: 3rem;
     font-family: var(--primary-font);
 }
@@ -48,19 +47,39 @@
 #about .records {
     font-family: var(--primary-font);
     font-size: 5rem;
-    padding-left: 0.25rem;
     color: var(--aqua);
     display: block;
     font-weight: 700;
 }
 
+@media (max-width: 690px) {
+    #about .welcome {
+        font-size: 2rem;
+        margin: 0;
+    }
+
+    #about .city {
+        display: flex;
+        justify-content: flex-start;
+        font-size: 2.5rem;
+    }
+
+    #about .records {
+        font-size: 3.8rem;
+    }
+
+    #about p {
+        font-size: 1.6rem;
+    }
+}
+
 @media (max-width: 480px) {
     #about {
-        margin: 5.5rem 0 1rem 0;
+        margin: 6.5rem 0 1rem 0;
     }
 
     #about .aboutContainer {
-        padding: 1.5rem;
+        padding: 1rem;
         margin: 0 1.5rem;
     }
 
@@ -72,8 +91,7 @@
     #about .city {
         display: flex;
         justify-content: flex-start;
-        margin-top: 0.25rem;
-        font-size: 1.2rem;
+        font-size: 1.6rem;
     }
 
     #about .records {

@@ -7,7 +7,7 @@ fieldset {
 
 #contact {
     margin: 5.5rem auto;
-    max-width: 1200px;
+    max-width: 1000px;
     margin-bottom: 2rem;
 }
 
@@ -24,7 +24,7 @@ fieldset {
     font-family: var(--secondary-font);
     font-weight: 500;
     color: var(--font-color);
-    background: rgba(0, 0, 0, 0.1);
+    background: rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
     border-radius: var(--comp-b-radius);

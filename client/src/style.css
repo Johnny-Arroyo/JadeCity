@@ -1,4 +1,4 @@
-:root {
+/* :root {
   --primary: #32696d;
   --secondary: #14242a;
   --tertiary: #79cdcc;
@@ -29,7 +29,6 @@ html {
   box-sizing: inherit;
 }
 
-/* generic styles for the page */
 body {
   padding: 0;
   margin: 0;
@@ -58,35 +57,74 @@ img {
 
 a {
   color: var(--font-color);
+} */
+
+/*Pin footer to bottom*/
+/* Global CSS */
+
+/* Define theme variables */
+:root {
+  --primary: #32696d;
+  --secondary: #14242a;
+  --tertiary: #79cdcc;
+  --font-color: #fcf8f1;
+  --hover-color: #ba9cf5;
+  --font-size: 1.3rem;
+  --primary-font: 'Belleza', sans-serif;
+  --secondary-font: 'Montserrat', sans-serif;
+  --tertiary-font: 'Playwrite NZ', cursive;
+  --comp-b-radius: 10px;
+  --img-b-radius: 8px;
+  --test-border: 1px solid red;
 }
 
-
-
-
-/* footer section */
-footer {
-  text-align: center;
-  padding: 4rem 0 1rem 0;
-  color: var(--font-color);
-}
-
-footer a {
-  color: var(--font-color);
-  transition: 0.2s ease;
-}
-
-footer a:hover {
-  color: var(--hover-color);
-  text-decoration: none;
-}
-
-footer ul {
-  list-style-type: none;
+body {
   padding: 0;
-  margin: 2rem 0;
+  margin: 0;
+  font-family: var(--primary-font);
+  background-image: url('../Public/img/JC(HighContrast).png');
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center 10%;
+  background-repeat: no-repeat;
+  color: var(--font-color);
+  font-size: var(--font-size);
+}
+
+/* Ensure .app-container takes at least full height */
+.app-container {
   display: flex;
-  flex-flow: row wrap;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4 {
+  margin: 0;
+  display: flex;
   justify-content: center;
-  gap: 2rem;
-  font-size: 1.5rem;
+}
+
+img {
+  width: 100%;
+}
+
+a {
+  color: var(--font-color);
+}
+
+/* Additional global styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.belleza-regular {
+  font-family: 'Belleza', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+html {
+  box-sizing: border-box;
 }

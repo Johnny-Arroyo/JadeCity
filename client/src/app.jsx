@@ -10,7 +10,7 @@ import Artists from './Pages/Artists/Artists.jsx'
 import ArtistCardLarge from './components/ArtistCardLarge/ArtistCardLarge.jsx'
 import Shop from './Pages/Shop/Shop.jsx'
 import ContactForm from './Pages/Contact/Contact.jsx'
-import Footer from './components/Footer'
+import Footer from './components/Footer/Footer'
 
 import { QueryClient, QueryClientProvider } from 'react-query'
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
@@ -20,7 +20,7 @@ const App = () => {
     const queryClient = new QueryClient(); // every child component will be able to fetch data with this with useQuery
 
     return (
-        <div>
+        <div className="app-container">
             <QueryClientProvider client={queryClient}>
                 <Router>
                     <ScrollToTop />
