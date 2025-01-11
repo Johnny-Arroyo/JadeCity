@@ -68,7 +68,6 @@ const Shop = () => {
     )
 
     if (status === 'loading') {
-        // style loading
         return <p className="loading">Loading Merch...</p>
     }
 
@@ -89,11 +88,11 @@ const Shop = () => {
             <div className="shop-list">
                 {products.map((product) => (
                     <ShopCard
-                        key={product.id} // Ensure this key is unique
+                        key={product.id}
                         title={product.title}
                         image={product.image}
                         price={product.price}
-                        url={product.url} // Pass the product URL as a prop
+                        url={product.url}
                     />
                 ))}
             </div>

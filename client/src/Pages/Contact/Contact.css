@@ -1,8 +1,7 @@
-/* contact section */
 fieldset {
-    border: 1px var(--font-color); /* Removes the default border */
-    padding: 0 0 1rem 0; /* Removes any padding */
-    font-size: 1rem; /* You can adjust this to your needs */
+    border: 1px var(--font-color);
+    padding: 0 0 1rem 0;
+    font-size: 1rem;
 }
 
 #contact {

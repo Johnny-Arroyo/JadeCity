@@ -6,11 +6,10 @@ const path = require('path')
 const app = express()
 const port = process.env.PORT
 
-// Serve static files from the dist directory
+// Serve static files from the dist
 app.use('/', express.static(path.join(__dirname, '../dist')))
 
 // API routes
-
 const emailRoute = require('./routes/email')
 app.use('/api/email', emailRoute)
 
@@ -23,10 +22,7 @@ app.use('/api/news', newsRoutes);
 const shopRoutes = require('./routes/shop');
 app.use('/api/shop', shopRoutes);
 
-// const printifyRoutes = require('./routes/printify');
-// app.use('/api/printify-products', printifyRoutes);
-
-// Handle any other routes (if necessary)
+// Handle any other routes
 app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, '../dist', 'index.html'))
 })

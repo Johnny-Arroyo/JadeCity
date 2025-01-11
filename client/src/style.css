@@ -1,68 +1,3 @@
-/* :root {
-  --primary: #32696d;
-  --secondary: #14242a;
-  --tertiary: #79cdcc;
-  --font-color: #fcf8f1;
-  --hover-color: #ba9cf5;
-  --font-size: 1.3rem;
-  --primary-font: 'Belleza', sans-serif;
-  --secondary-font: 'Montserrat', sans-serif;
-  --tertiary-font: 'Playwrite NZ', cursive;
-  --comp-b-radius: 10px;
-  --img-b-radius: 8px;
-  --test-border: 1px solid red
-}
-
-.belleza-regular {
-  font-family: 'Belleza', sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-html {
-  box-sizing: border-box;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-}
-
-body {
-  padding: 0;
-  margin: 0;
-  font-family: var(--primary-font);
-  background-image: url('../Public/img/JC(HighContrast).png');
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: center 10%;
-  background-repeat: no-repeat;
-  color: var(--font-color);
-  font-size: var(--font-size);
-}
-
-h1,
-h2,
-h3,
-h4 {
-  margin: 0;
-  display: flex;
-  justify-content: center;
-}
-
-img {
-  width: 100%;
-}
-
-a {
-  color: var(--font-color);
-} */
-
-/*Pin footer to bottom*/
-/* Global CSS */
-
-/* Define theme variables */
 :root {
   --primary: #32696d;
   --secondary: #14242a;
@@ -112,7 +47,6 @@ a {
   color: var(--font-color);
 }
 
-/* Additional global styles */
 *,
 *::before,
 *::after {

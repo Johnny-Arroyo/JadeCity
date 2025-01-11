@@ -1,10 +1,9 @@
 require('dotenv').config()
-const express = require('express') // Make sure to include this if using node-fetch
+const express = require('express')
 const router = express.Router()
-// const fs = require('fs');
 
 const PRINTIFY_API_KEY = process.env.PRINTIFY_API_KEY
-const PRINTIFY_SHOP_ID = process.env.PRINTIFY_SHOP_ID // Get store ID from env
+const PRINTIFY_SHOP_ID = process.env.PRINTIFY_SHOP_ID
 
 // Fetch Printify products using the store ID
 router.get('/', async (req, res) => {
@@ -34,17 +33,6 @@ router.get('/', async (req, res) => {
         }
 
         const products = await response.json()
-        // console.log("HERE ARE THE PRODUCTS => ", products);
-
-      //   //write product data to local file to more easily read it
-      //   fs.writeFile('productsResponse.json', JSON.stringify(products, null, 2), (err) => {
-      //     if (err) {
-      //         console.error('Error writing to file:', err);
-      //     } else {
-      //         console.log('Products data written to productsResponse.json');
-      //     }
-      // });
-
 
         res.json(products.data)
     } catch (error) {

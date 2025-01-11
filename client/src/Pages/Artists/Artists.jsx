@@ -1,4 +1,3 @@
-// src/components/ArtistSection.js
 import React, { useEffect, useState } from 'react';
 import ArtistCard from '../../components/ArtistCard/ArtistCard.jsx';
 import styles from "./Artists.css"

@@ -14,7 +14,7 @@ const Contact = () => {
     })
     const [isSubmitting, setIsSubmitting] = useState(false)
     const [successMessage, setSuccessMessage] = useState('')
-    // Handle input change
+
     const handleChange = (e) => {
         const { name, value } = e.target
         setFormData({
@@ -23,8 +23,6 @@ const Contact = () => {
         })
     }
 
-    // Handle form submission
-    // Handle form submission
     const handleSubmit = (e) => {
         e.preventDefault()
 
@@ -41,13 +39,13 @@ const Contact = () => {
             additionalInfo: formData.additionalInfo,
         }
 
-        // Send the form data using fetch
+        // Send the form data
         fetch('/api/email', {
             method: 'POST',
             headers: {
-                'Content-Type': 'application/json', // Add Content-Type header
+                'Content-Type': 'application/json',
             },
-            body: JSON.stringify(formDataToSend), // Send JSON data
+            body: JSON.stringify(formDataToSend),
         })
             .then((response) => {
                 if (
@@ -57,7 +55,7 @@ const Contact = () => {
                 ) {
                     return response.json()
                 }
-                return response.text() // Handle non-JSON responses
+                return response.text()
             })
             .then((data) => {
                 setSuccessMessage('Thank you for your submission!')
