@@ -1,12 +1,14 @@
 /* Navbar Background */
 .nav-background {
-    background-color: var(--secondary);
+    background-color: rgba(92, 197, 159, 0.5);
+    backdrop-filter: blur(5px);
     position: fixed;
     width: 100%;
+    height: 76px;
     top: 0;
     margin-bottom: 2rem;
     box-shadow: 0px 2px 5px 2px rgba(20, 36, 42, 0.4);
-    z-index: 20;
+    z-index: 10;
 }
 
 /* Main Navigation */
@@ -26,7 +28,8 @@ nav {
     flex: 1;
     display: flex;
     justify-content: flex-start;
-    gap: 1rem
+    gap: 1rem;
+    padding-right: 2rem;
 }
 
 /* Centered Navigation Links */
@@ -46,14 +49,23 @@ nav {
     transition: transform 0.1s ease;
 }
 
+.social-links ul {
+    gap: 2rem;
+    padding-left: 2rem;
+    padding-right: 1rem;
+}
+
 /* Navigation Links Styling */
 nav ul {
     display: flex;
-    gap: 2rem;
     margin: 0;
     padding: 0;
     list-style: none;
     align-items: center;
+}
+
+.nav-links ul {
+    gap: 4rem;
 }
 
 nav ul li {
@@ -223,102 +235,102 @@ nav .jade-city-records {
 /*Nav Drawer*/
 /* Hide nav-drawer by default */
 .nav-drawer {
-  position: fixed;
-  top: 0;
-  right: -300px; /* Positioned off-screen initially */
-  width: 150px; /* Adjusted for better content fit */
-  height: 100%;
-  background: rgba(20, 36, 42, 0.4);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
-  border-left: thick double rgba(121, 205, 204, 0.1);
-  z-index: 10;
-  transition: right 0.3s ease;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between; /* Ensures social links are at the bottom */
-  padding: 2rem 1rem;
+    position: fixed;
+    top: 0;
+    right: -300px; /* Positioned off-screen initially */
+    width: 150px; /* Adjusted for better content fit */
+    height: 100vh;
+    background: rgba(20, 36, 42, 0.4);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    border-left: thick double rgba(121, 205, 204, 0.1);
+    z-index: 10;
+    transition: right 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Ensures social links are at the bottom */
+    padding: 2rem 1rem;
 }
 
 .nav-drawer.open {
-  right: 0; /* Slide the drawer in when open */
+    right: 0; /* Slide the drawer in when open */
 }
 
 .nav-drawer ul.nav-links {
-  display: flex;
-  flex-direction: column; /* Align nav links in a single column */
-  align-items: center;
-  justify-content: flex-start;
-  margin-top: 6rem;
-  padding: 0;
-  list-style: none;
+    display: flex;
+    flex-direction: column; /* Align nav links in a single column */
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 6rem;
+    padding: 0;
+    list-style: none;
 }
 
 .nav-drawer ul.nav-links li {
-  margin-bottom: 1.5rem; /* Space between nav links */
+    margin-bottom: 1.5rem; /* Space between nav links */
 }
 
 .nav-drawer ul.nav-links a {
-  text-decoration: none;
-  color: var(--font-color);
-  font-size: 1.5rem;
-  font-weight: 400;
-  transition: color 0.2s ease;
+    text-decoration: none;
+    color: var(--font-color);
+    font-size: 1.5rem;
+    font-weight: 400;
+    transition: color 0.2s ease;
 }
 
 .nav-drawer ul.nav-links a:hover {
-  color: var(--hover-color);
+    color: var(--hover-color);
 }
 
 /* Social Links Section */
 .nav-drawer ul.social-links {
-  display: grid;
-  grid-template-columns: repeat(2, 40px); /* 2x2 grid */
-  gap: 1rem; /* Space between social links */
-  justify-content: center;
-  list-style: none;
-  margin-bottom: 1rem;
+    display: grid;
+    grid-template-columns: repeat(2, 40px); /* 2x2 grid */
+    gap: 1rem; /* Space between social links */
+    justify-content: center;
+    list-style: none;
+    margin-bottom: 1rem;
 }
 
 .nav-drawer ul.social-links li {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px; /* Fixed width */
-  height: 40px; /* Fixed height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px; /* Fixed width */
+    height: 40px; /* Fixed height */
 }
 
 .nav-drawer ul.social-links li a {
-  font-size: 1.5rem; /* Adjust icon size */
-  color: var(--font-color);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%; /* Ensure full area is clickable */
-  height: 100%; /* Ensure full area is clickable */
-  transition: color 0.2s ease, background 0.2s ease;
+    font-size: 1.5rem; /* Adjust icon size */
+    color: var(--font-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%; /* Ensure full area is clickable */
+    height: 100%; /* Ensure full area is clickable */
+    transition: color 0.2s ease, background 0.2s ease;
 }
 
 .nav-drawer ul.social-links li a:hover {
-  color: var(--hover-color);
+    color: var(--hover-color);
 }
 
 /* Responsive Adjustments */
 @media (max-width: 849px) {
-  .nav-links {
-      display: none; /* Hidden initially */
-  }
+    .nav-links {
+        display: none; /* Hidden initially */
+    }
 
-  .social-links {
-      display: none; /* Hidden initially */
-  }
+    .social-links {
+        display: none; /* Hidden initially */
+    }
 
-  .nav-drawer.open {
-      display: flex;
-  }
+    .nav-drawer.open {
+        display: flex;
+    }
 
-  .hamburger {
-      display: flex; /* Show hamburger button */
-  }
+    .hamburger {
+        display: flex; /* Show hamburger button */
+    }
 }
