@@ -1,36 +1,35 @@
 :root {
-    --primary: #32696d;
-    --secondary: #14242a;
-    --tertiary: #79cdcc;
-    --font-color: #fcf8f1;
-    --hover-color: #ba9cf5;
-    --font-size: 1.3rem;
-    --primary-font: 'Belleza', sans-serif;
-    --secondary-font: 'Montserrat', sans-serif;
-    --tertiary-font: 'Playwrite NZ', cursive;
-    --comp-b-radius: 10px;
-    --img-b-radius: 8px;
-    --test-border: 1px solid red;
+  --primary: #32696d;
+  --secondary: #14242a;
+  --tertiary: #79cdcc;
+  --font-color: #fcf8f1;
+  --hover-color: #7251b4;
+  --font-size: 1.3rem;
+  --primary-font: 'Belleza', sans-serif;
+  --secondary-font: 'Montserrat', sans-serif;
+  --tertiary-font: 'Playwrite NZ', cursive;
+  --comp-b-radius: 10px;
+  --img-b-radius: 8px;
+  --test-border: 1px solid red;
 }
 
 body {
-    padding: 0;
-    margin: 0;
-    font-family: var(--primary-font);
-    background-image: url('../Public/img/JC(HighContrast).png');
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center 10%;
-    background-repeat: no-repeat;
-    color: var(--font-color);
-    font-size: var(--font-size);
+  padding: 0;
+  margin: 0;
+  font-family: var(--primary-font);
+  background-image: url('../Public/img/JC(HighContrast).png');
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center 10%;
+  background-repeat: no-repeat;
+  color: var(--font-color);
+  font-size: var(--font-size);
 }
 
-/* Ensure .app-container takes at least full height */
 .app-container {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .nav-background {
@@ -42,46 +41,44 @@ body {
 }
 
 .nav-background-duplicate {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 86px; /* Adjusted height */
-    background-color: #ffffff; /* Slightly different color */
-
-    z-index: -1; /* Behind the first layer */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 86px;
+  background-color: var(--font-color);
+  z-index: -1;
 }
-
 
 h1,
 h2,
 h3,
 h4 {
-    margin: 0;
-    display: flex;
-    justify-content: center;
+  margin: 0;
+  display: flex;
+  justify-content: center;
 }
 
 img {
-    width: 100%;
+  width: 100%;
 }
 
 a {
-    color: var(--font-color);
+  color: var(--font-color);
 }
 
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .belleza-regular {
-    font-family: 'Belleza', sans-serif;
-    font-weight: 400;
-    font-style: normal;
+  font-family: 'Belleza', sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 html {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }

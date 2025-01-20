@@ -1,7 +1,8 @@
-import React, {useState, useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
 import ScrollToTop from './utils/scrollToTop.jsx'
 
 import NavBar from './components/NavBar/navBar.jsx'
+import Hero from './Pages/Hero/Hero.jsx'
 import About from './Pages/About/About.jsx'
 import News from './Pages/News/News.jsx'
 import NewsBanner from './components/NewsCard/NewsBanner'
@@ -13,45 +14,68 @@ import ContactForm from './Pages/Contact/Contact.jsx'
 import Footer from './components/Footer/Footer'
 
 import { QueryClient, QueryClientProvider } from 'react-query'
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
+import {
+    BrowserRouter as Router,
+    Routes,
+    Route,
+} from 'react-router-dom'
 
 const App = () => {
-    const queryClient = new QueryClient(); // every child component will be able to fetch data with this with useQuery
+    const queryClient = new QueryClient() // every child component will be able to fetch data with this with useQuery
 
     return (
         <div className="app-container">
             <QueryClientProvider client={queryClient}>
                 <Router>
-                    <ScrollToTop />
+                <ScrollToTop />
                     <div className="nav-background">
                         <NavBar />
                     </div>
                     <div className="nav-background-duplicate"></div>
                     <div className="content">
                         <Routes>
-                            <Route path="/" element={
-                                <>
-                                    <About />
-                                    <NewsBanner />
-                                    <Artists />
-                                    <Shop />
-                                    <ContactForm />
-                                </>
-                            } />
-                            <Route path="/About" element={<About />} />
+                            <Route
+                                path="/"
+                                element={
+                                    <>
+                                        <Hero />
+                                        <About />
+                                        <NewsBanner />
+                                        <Artists />
+                                        <Shop />
+                                        <ContactForm />
+                                    </>
+                                }
+                            />
+                            <Route
+                                path="/About"
+                                element={<About />}
+                            />
                             <Route path="/News" element={<News />} />
-                            <Route path="/News/:title" element={<NewsCardLarge/>} />
-                            <Route path="/Artists" element={<Artists />} />
-                            <Route path="/Artists/:name" element={<ArtistCardLarge />} />
+                            <Route
+                                path="/News/:title"
+                                element={<NewsCardLarge />}
+                            />
+                            <Route
+                                path="/Artists"
+                                element={<Artists />}
+                            />
+                            <Route
+                                path="/Artists/:name"
+                                element={<ArtistCardLarge />}
+                            />
                             <Route path="/Shop" element={<Shop />} />
-                            <Route path="/Contact" element={<ContactForm />} />
+                            <Route
+                                path="/Contact"
+                                element={<ContactForm />}
+                            />
                         </Routes>
                     </div>
                     <Footer />
                 </Router>
             </QueryClientProvider>
         </div>
-    );
-};
+    )
+}
 
-export default App;
+export default App

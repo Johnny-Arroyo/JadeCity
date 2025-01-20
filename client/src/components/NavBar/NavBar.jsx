@@ -48,11 +48,10 @@ const NavBar = () => {
                                     id="jc-icon"
                                     alt="Jade City Emblem"
                                 />
-                                <span className="JCR">
-                                    JADE CITY RECORDS
-                                </span>
                             </Link>
                         </h1>
+                        <div className="logobg"></div>
+                        <div className="logobg-dup"></div>
                     </div>
                     {/* Centered Navigation Links */}
                     <div
@@ -61,68 +60,19 @@ const NavBar = () => {
                         }`}>
                         <ul role="list">
                             <li>
-                                <Link to="/about">about</Link>
+                                <Link to="/about">ABOUT</Link>
                             </li>
                             <li>
-                                <Link to="/news">news</Link>
+                                <Link to="/news">NEWS</Link>
                             </li>
                             <li>
-                                <Link to="/artists">artists</Link>
+                                <Link to="/artists">ARTISTS</Link>
                             </li>
                             <li>
-                                <Link to="/shop">shop</Link>
+                                <Link to="/shop">SHOP</Link>
                             </li>
                             <li>
-                                <Link to="/contact">contact</Link>
-                            </li>
-                        </ul>
-                    </div>
-                    {/* Social Links on the right */}
-                    <div className="social-links">
-                        <ul role="list">
-                            <li>
-                                <a
-                                    className="spotify"
-                                    href="https://open.spotify.com/playlist/6VVSzRxczOu431YRU941YD?si=1c97cf7f19ed4dde&nd=1&dlsi=4087f4d648d4414d"
-                                    target="_blank"
-                                    aria-label="Spotify">
-                                    <span
-                                        className="fa-brands fa-spotify"
-                                        aria-hidden="true"></span>
-                                </a>
-                            </li>
-                            <li>
-                                <a
-                                    className="youtube"
-                                    href="https://www.youtube.com/@JadeCityRecords"
-                                    target="_blank"
-                                    aria-label="YouTube">
-                                    <span
-                                        className="fa-brands fa-youtube"
-                                        aria-hidden="true"></span>
-                                </a>
-                            </li>
-                            <li>
-                                <a
-                                    className="discord"
-                                    href="https://discord.gg/GhG5D8qhyv"
-                                    target="_blank"
-                                    aria-label="Discord">
-                                    <span
-                                        className="fa-brands fa-discord"
-                                        aria-hidden="true"></span>
-                                </a>
-                            </li>
-                            <li>
-                                <a
-                                    className="instagram"
-                                    href="https://www.instagram.com/jadecityrecords/"
-                                    target="_blank"
-                                    aria-label="Instagram">
-                                    <span
-                                        className="fa-brands fa-instagram"
-                                        aria-hidden="true"></span>
-                                </a>
+                                <Link to="/contact">CONTACT</Link>
                             </li>
                         </ul>
                     </div>
@@ -152,35 +102,35 @@ const NavBar = () => {
                                 <Link
                                     to="/about"
                                     onClick={handleLinkClick}>
-                                    about
+                                    ABOUT
                                 </Link>
                             </li>
                             <li>
                                 <Link
                                     to="/news"
                                     onClick={handleLinkClick}>
-                                    news
+                                    NEWS
                                 </Link>
                             </li>
                             <li>
                                 <Link
                                     to="/artists"
                                     onClick={handleLinkClick}>
-                                    artists
+                                    ARTISTS
                                 </Link>
                             </li>
                             <li>
                                 <Link
                                     to="/shop"
                                     onClick={handleLinkClick}>
-                                    shop
+                                    SHOP
                                 </Link>
                             </li>
                             <li>
                                 <Link
                                     to="/contact"
                                     onClick={handleLinkClick}>
-                                    contact
+                                    CONTACT
                                 </Link>
                             </li>
                         </ul>
@@ -232,6 +182,13 @@ const NavBar = () => {
                         </ul>
                     </div>
                 </nav>
+                <a
+                    href="https://open.spotify.com/playlist/6VVSzRxczOu431YRU941YD?si=1c97cf7f19ed4dde&nd=1&dlsi=4087f4d648d4414d"
+                    target="_blank"
+                    aria-label="Spotify"
+                    className="nav-listen">
+                    Listen on Spotify
+                </a>
             </header>
         </div>
     )

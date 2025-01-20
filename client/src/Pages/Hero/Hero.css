@@ -1,0 +1,134 @@
+#hero {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  align-items: center;
+  max-width: 1200px;
+  margin: 4.5rem auto;
+  height: 85vh;
+  color: var(--secondary);
+}
+
+#hero .heroContainer {
+  margin: 0 auto;
+  padding: 1rem 2rem 2rem 2rem;
+  height: auto;
+  width: auto;
+  /* background: rgba(255, 255, 255, 0.01);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border-radius: var(--comp-b-radius);
+  box-shadow: 0px 50px 100px 1px rgba(20, 36, 42, 0.2);
+  border: thick double rgba(121, 205, 204, 0.1); */
+}
+
+#hero .tagline {
+  display: flex;
+  justify-content: flex-start;
+  padding-top: 2rem;
+  margin-right: auto;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  font-family: var(--primary-font);
+}
+
+#hero .welcome {
+  font-family: var(--secondary-font);
+  font-size: 1.5rem;
+  padding: 0;
+  font-weight: 600;
+  margin: 1rem 0 0 0;
+}
+
+#hero .records {
+  font-family: var(--primary-font);
+  font-size: 6.25rem;
+  height: 75px;
+  color: var(--aqua);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+
+.listen {
+  background-color: var(--hover-color);
+  color: var(--secondary);
+  padding: 0.5rem;
+  margin-right: 1.5rem;
+  border-radius: 0.5rem;
+  font-family: var(--secondary-font);
+  text-decoration: none;
+  transition: 0.2s ease;
+  font-weight: bold;
+  border: 1px double rgba(0, 0, 0, 0.5);
+}
+
+.demo {
+  background-color: var(--tertiary);
+  color: var(--secondary);
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  font-family: var(--secondary-font);
+  text-decoration: none;
+  transition: 0.2s ease;
+  font-weight: bold;
+  border: 1px double rgba(0, 0, 0, 0.5);
+}
+
+.listen:hover {
+  color: var(--font-color);
+  background-color: var(--hover-color);
+  box-shadow: 0 0 25px 1px rgba(255, 255, 255, 0.5);
+  border: 1px double rgba(255, 255, 255, 1);
+}
+
+.demo:hover {
+  color: var(--font-color);
+  background-color: var(--tertiary);
+  box-shadow: 0 0 25px 1px rgba(255, 255, 255, 0.5);
+  border: 1px double rgba(255, 255, 255, 1);
+}
+
+@media (max-width: 690px) {
+  #hero .welcome {
+      font-size: 2rem;
+      margin: 0;
+  }
+
+  #hero .tagline {
+      display: flex;
+      justify-content: flex-start;
+      font-size: 2.5rem;
+  }
+
+  #hero .records {
+      font-size: 3.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  #hero {
+      margin: 6.5rem 0 1rem 0;
+  }
+
+  #hero .heroContainer {
+      padding: 1rem;
+      margin: 0 1.5rem;
+  }
+
+  #hero .welcome {
+      font-size: 1.2rem;
+      margin: 0;
+  }
+
+  #hero .tagline {
+      display: flex;
+      justify-content: flex-start;
+      font-size: 1.6rem;
+  }
+
+  #hero .records {
+      font-size: 2.2rem;
+  }
+}
