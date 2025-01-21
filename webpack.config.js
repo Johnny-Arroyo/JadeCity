@@ -60,7 +60,7 @@ module.exports = {
                 {
                     from: path.resolve(
                         __dirname,
-                        'client/public/img/FireflyLaser.jpg'
+                        'client/Public/img/FireflyLaser.jpg'
                     ),
                     to: 'static/images', // Output directory in `dist`
                 },
