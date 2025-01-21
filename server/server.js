@@ -1,14 +1,17 @@
 // server.js
 require('dotenv').config()
 const express = require('express')
+const cors = require('cors')
 const path = require('path')
 
 const app = express()
 const port = process.env.PORT
 
-const cors = require('cors');
+// Enable CORS
 app.use(cors({
-    origin: 'https://jadecityrecords.com' // Amplify frontend URL
+    origin: 'https://jadecityrecords.com', // Amplify frontend URL
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    allowedHeaders: ['Content-Type', 'Authorization'],
 }));
 
 // Serve static files from the dist
