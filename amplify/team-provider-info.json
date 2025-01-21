@@ -1,0 +1,15 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-jadecityrecords-dev-f1498-authRole",
+      "UnauthRoleArn": "arn:aws:iam::724772075233:role/amplify-jadecityrecords-dev-f1498-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::724772075233:role/amplify-jadecityrecords-dev-f1498-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-jadecityrecords-dev-f1498-deployment",
+      "UnauthRoleName": "amplify-jadecityrecords-dev-f1498-unauthRole",
+      "StackName": "amplify-jadecityrecords-dev-f1498",
+      "StackId": "arn:aws:cloudformation:us-east-1:724772075233:stack/amplify-jadecityrecords-dev-f1498/6d8d80e0-d78f-11ef-86b5-0e67775896cb",
+      "AmplifyAppId": "d286z9k1pxgrg2"
+    }
+  }
+}
