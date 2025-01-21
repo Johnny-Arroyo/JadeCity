@@ -6,6 +6,11 @@ const path = require('path')
 const app = express()
 const port = process.env.PORT
 
+const cors = require('cors');
+app.use(cors({
+    origin: 'https://jadecityrecords.com' // Amplify frontend URL
+}));
+
 // Serve static files from the dist
 app.use('/', express.static(path.join(__dirname, '../dist')))
 

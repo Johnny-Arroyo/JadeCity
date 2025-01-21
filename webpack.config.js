@@ -6,7 +6,7 @@ const CopyPlugin = require('copy-webpack-plugin')
 module.exports = {
     entry: './client/src/index.jsx', // Entry point of your React app
     output: {
-        path: path.resolve(__dirname, 'dist'), // Output directory for the bundle
+        path: path.resolve(__dirname, 'client/dist'), // Output directory for the bundle
         filename: 'bundle.js',
         publicPath: '/',
     },
@@ -51,7 +51,7 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: './client/public/index.html', // Point to your HTML template
+            template: './client/Public/index.html', // Point to your HTML template
             filename: 'index.html',
         }),
         new NodePolyfillPlugin(),
@@ -60,7 +60,7 @@ module.exports = {
                 {
                     from: path.resolve(
                         __dirname,
-                        'client/public/img/FireflyLaser.jpg'
+                        'client/Public/img/FireflyLaser.jpg'
                     ),
                     to: 'static/images', // Output directory in `dist`
                 },
