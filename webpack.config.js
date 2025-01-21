@@ -51,7 +51,7 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: './client/public/index.html', // Point to your HTML template
+            template: './client/Public/index.html', // Point to your HTML template
             filename: 'index.html',
         }),
         new NodePolyfillPlugin(),
