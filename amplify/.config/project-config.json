@@ -1,5 +1,4 @@
 {
-  "whyContinueWithGen1": "Prefer not to answer",
   "projectName": "JadeCityRecords",
   "version": "3.1",
   "frontend": "javascript",
@@ -14,5 +13,6 @@
   },
   "providers": [
     "awscloudformation"
-  ]
+  ],
+  "amplifyAppId": "d3lroben27ew8g"
 }
