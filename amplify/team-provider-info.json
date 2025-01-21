@@ -11,18 +11,5 @@
       "StackId": "arn:aws:cloudformation:us-east-1:724772075233:stack/amplify-jadecityrecords-dev-f1498/6d8d80e0-d78f-11ef-86b5-0e67775896cb",
       "AmplifyAppId": "d286z9k1pxgrg2"
     }
-  },
-  "prod": {
-    "awscloudformation": {
-      "AuthRoleName": "amplify-jadecityrecords-prod-5b51f-authRole",
-      "UnauthRoleArn": "arn:aws:iam::724772075233:role/amplify-jadecityrecords-prod-5b51f-unauthRole",
-      "AuthRoleArn": "arn:aws:iam::724772075233:role/amplify-jadecityrecords-prod-5b51f-authRole",
-      "Region": "us-east-1",
-      "DeploymentBucketName": "amplify-jadecityrecords-prod-5b51f-deployment",
-      "UnauthRoleName": "amplify-jadecityrecords-prod-5b51f-unauthRole",
-      "StackName": "amplify-jadecityrecords-prod-5b51f",
-      "StackId": "arn:aws:cloudformation:us-east-1:724772075233:stack/amplify-jadecityrecords-prod-5b51f/18efaa30-d79a-11ef-a205-1264bdb230a7",
-      "AmplifyAppId": "d286z9k1pxgrg2"
-    }
   }
 }
