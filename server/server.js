@@ -10,8 +10,7 @@ const port = process.env.PORT
 // Enable CORS
 app.use(cors({
     origin: 'https://jadecityrecords.com', // Amplify frontend URL
-    methods: ['GET', 'POST', 'PUT', 'DELETE'],
-    allowedHeaders: ['Content-Type', 'Authorization'],
+    allowedHeaders :['Content-Type', 'Authorization', 'Referer'],
 }));
 
 // Serve static files from the dist
