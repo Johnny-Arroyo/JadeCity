@@ -8,7 +8,8 @@ const port = process.env.PORT
 
 const cors = require('cors');
 app.use(cors({
-    origin: 'https://jadecityrecords.com' // Amplify frontend URL
+    origin: 'https://jadecityrecords.com', // Amplify frontend URL
+    allowedHeaders :['Content-Type', 'Authorization', 'Referer'],
 }));
 
 // Serve static files from the dist
