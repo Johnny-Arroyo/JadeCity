@@ -7,7 +7,7 @@ const app = express()
 const port = process.env.PORT
 
 // Serve static files from the dist
-app.use('/', express.static(path.join(__dirname, '../dist')))
+app.use('/', express.static(path.join(__dirname, '../client/dist')))
 
 // API routes
 const emailRoute = require('./routes/email')
@@ -24,7 +24,7 @@ app.use('/api/shop', shopRoutes);
 
 // Handle any other routes
 app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, '../dist', 'index.html'))
+    res.sendFile(path.join(__dirname, '../client/dist', 'index.html'))
 })
 
 app.listen(port, () => {

@@ -4,7 +4,7 @@
     "description": "",
     "main": "server/server.js",
     "scripts": {
-        "start": "nodemon server/server.js",
+        "start": "node server/server.js",
         "build": "webpack --mode=production",
         "dev": "concurrently \"npm run start\" \"npm run build -- --watch\""
     },
@@ -14,7 +14,7 @@
     "dependencies": {
         "aws-amplify": "^6.12.1",
         "aws-sdk": "^2.1692.0",
-        "core-js": "^3.40.0",
+        "cors": "^2.8.5",
         "dotenv": "^16.4.5",
         "express": "^4.20.0",
         "glob": "^11.0.1",
