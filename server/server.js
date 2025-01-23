@@ -9,7 +9,11 @@ const port = process.env.PORT || 3000
 // Enable CORS
 app.use(
     cors({
-        origin: ['http://localhost:3000'], // Allow requests from your frontend in development
+        origin: [
+            'http://localhost:3000',
+            'https://jadecityrecords.com',
+            'https://www.jadecityrecords.com',
+        ],
         methods: ['GET', 'POST', 'PUT', 'DELETE'],
         allowedHeaders: ['Content-Type', 'Authorization'],
     })

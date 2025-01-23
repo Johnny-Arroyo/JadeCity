@@ -1,6 +1,8 @@
 export const fetchAPIData = async (type) => {
   try {
       const baseURL = process.env.REACT_APP_API_URL || ''; // Use Amplify's REACT_APP_API_URL in production, fallback to relative path in development
+      const finalURL = `${baseURL}/api/${type}`;
+      console.log('Fetching from:', finalURL);
       const response = await fetch(`${baseURL}/api/${type}`);
       
       if (!response.ok) {
