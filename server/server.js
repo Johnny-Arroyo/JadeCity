@@ -1,40 +1,41 @@
-// server.js
 require('dotenv').config()
 const express = require('express')
 const cors = require('cors')
 const path = require('path')
 
 const app = express()
-const port = process.env.PORT
+const port = process.env.PORT || 3000
 
 // Enable CORS
-app.use(cors({
-    origin: ['https://jadecityrecords.com', 'http://localhost:3000'], // Allow both production and local frontend
-    methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allow specific HTTP methods
-    allowedHeaders: ['Content-Type', 'Authorization', 'Referer'], // Allow specific headers
-}));
+app.use(
+    cors({
+        origin: ['http://localhost:3000'], // Allow requests from your frontend in development
+        methods: ['GET', 'POST', 'PUT', 'DELETE'],
+        allowedHeaders: ['Content-Type', 'Authorization'],
+    })
+)
 
-// Serve static files from the dist
-app.use('/', express.static(path.join(__dirname, '../dist')))
-
-// API routes
+// Serve API routes
 const emailRoute = require('./routes/email')
 app.use('/api/email', emailRoute)
 
-const artistsRoutes = require('./routes/artists');
-app.use('/api/artists', artistsRoutes);
+const artistsRoutes = require('./routes/artists')
+app.use('/api/artists', artistsRoutes)
 
-const newsRoutes = require('./routes/news');
-app.use('/api/news', newsRoutes);
+const newsRoutes = require('./routes/news')
+app.use('/api/news', newsRoutes)
 
-const shopRoutes = require('./routes/shop');
-app.use('/api/shop', shopRoutes);
+const shopRoutes = require('./routes/shop')
+app.use('/api/shop', shopRoutes)
 
-// Handle any other routes
+// Serve React app for non-API routes
+app.use(express.static(path.join(__dirname, '../client/dist')))
+
 app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, '../dist', 'index.html'))
+    res.sendFile(path.join(__dirname, '../client/dist/index.html'))
 })
 
+// Start Server
 app.listen(port, () => {
     console.log(`😎 Server is running on http://localhost:${port} 😎`)
 })

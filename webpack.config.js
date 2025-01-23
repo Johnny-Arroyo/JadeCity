@@ -44,7 +44,7 @@ module.exports = {
     },
     devServer: {
         static: {
-            directory: path.join(__dirname, 'dist'), // Serve content from the dist folder
+            directory: path.join(__dirname, 'client/dist'), // Serve content from the dist folder
         },
         compress: true,
         port: 3000,
