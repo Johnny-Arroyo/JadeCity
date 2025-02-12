@@ -32,23 +32,15 @@ body {
   min-height: 100vh;
 }
 
-.nav-background {
-  z-index: 10;
+.nav-bar {
+  margin-bottom: 8rem;
 }
 
 .content {
   z-index: 5;
 }
 
-.nav-background-duplicate {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 86px;
-  background-color: var(--font-color);
-  z-index: -1;
-}
+
 
 h1,
 h2,
@@ -81,4 +73,47 @@ a {
 
 html {
   box-sizing: border-box;
+}
+
+
+.aboutHome {
+  margin-bottom: 24rem;
+}
+@media (max-width) {
+  .aboutHome {
+    margin-bottom: 8rem;
+  }
+}
+
+.newsHome {
+  height:fit-content;
+  padding: 3rem;
+  margin-bottom: 12rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-top: 2px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+@media (max-width: 480px) {
+  .newsHome {
+    padding: 1rem;
+    margin-bottom: 6rem;
+  }
+}
+
+.artistHome {
+  margin-bottom: 12rem;
+}
+@media (max-width: 480px) {
+  .artistHome {
+    margin-bottom: 6rem;
+  }
+}
+
+.shopHome {
+  margin-bottom: 12rem;
+}
+
+.contactHome {
+  margin-bottom: 12rem;
 }

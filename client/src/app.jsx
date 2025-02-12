@@ -27,11 +27,10 @@ const App = () => {
         <div className="app-container">
             <QueryClientProvider client={queryClient}>
                 <Router>
-                <ScrollToTop />
-                    <div className="nav-background">
+                    <ScrollToTop />
+                    <div className="nav-bar">
                         <NavBar />
                     </div>
-                    <div className="nav-background-duplicate"></div>
                     <div className="content">
                         <Routes>
                             <Route
@@ -39,11 +38,20 @@ const App = () => {
                                 element={
                                     <>
                                         <Hero />
-                                        <About />
-                                        <NewsBanner />
-                                        <Artists />
-                                        <Shop />
-                                        <ContactForm />
+                                        <div className="aboutHome">
+                                            <About />
+                                        </div>
+                                        <div className="newsHome">
+                                            <NewsBanner />
+                                        </div>
+                                        <div className="artistHome">
+                                            <Artists />
+                                        </div>
+                                        <div className='shopHome'><Shop /></div>
+                                        
+                                        <div className="contactHome">
+                                            <ContactForm />
+                                        </div>
                                     </>
                                 }
                             />

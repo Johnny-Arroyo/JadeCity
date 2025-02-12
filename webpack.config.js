@@ -6,7 +6,7 @@ const CopyPlugin = require('copy-webpack-plugin')
 module.exports = {
     entry: './client/src/index.jsx', // Entry point of your React app
     output: {
-        path: path.resolve(__dirname, 'dist'), // Output directory for the bundle
+        path: path.resolve(__dirname, './client/dist'), // Output directory for the bundle
         filename: 'bundle.js',
         publicPath: '/',
     },

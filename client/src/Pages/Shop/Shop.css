@@ -1,12 +1,12 @@
 #shop {
-  margin: 6.5rem auto;
+  margin: 0 auto;
   max-width: 1200px;
   margin-bottom: 2rem;
 }
 
 #shop h2 {
   font-size: 2.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 3rem;
 }
 
 #shop h3 {
@@ -23,12 +23,12 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 6.5rem auto;
+  margin: 8rem auto;
 }
 
 @media (max-width: 480px) {
   #shop {
       padding: 0rem;
-      margin: 5.5rem 1.5rem;
+      margin: 1.25rem 1.5rem;
   }
 }

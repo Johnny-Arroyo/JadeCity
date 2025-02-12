@@ -4,7 +4,8 @@
   flex-wrap: wrap;
   align-items: center;
   max-width: 1200px;
-  margin: 4.5rem auto;
+  margin: 0 auto;
+  margin-bottom: 3rem;
   height: 85vh;
   color: var(--secondary);
 }

@@ -1,11 +1,8 @@
 /*AboutCSS*/
 #about {
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  max-width: 45vw;
-  margin: 7.5rem auto;
+  width: 50vw;
+  margin: 0 auto;
   height: auto;
   color: var(--secondary);
 }
@@ -13,37 +10,40 @@
 #about .aboutContainer {
   color: var(--font-color);
   margin: 0 1rem;
-  padding: 1rem 2rem 2rem 2rem;
-  background: rgba(255, 255, 255, 0.2);
+  height: fit-content;
+  padding: 1rem 2rem;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0px 5px 15px 5px rgba(0, 0, 0, 0.2);
+  border-radius: var(--comp-b-radius);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
-  border-radius: var(--comp-b-radius);
-  box-shadow: 0px 50px 100px 1px rgba(20, 36, 42, 0.2);
-  border: thick double rgba(255, 255, 255, 0.5);
+  border: 2px solid rgba(255, 255, 255, 0.1);
 }
 
-h2 .about {
+#about h2 {
   display: grid;
   text-align: start;
-  margin: auto;
+  margin: 1.5rem 0 3rem 0;
   width: 100%;
+  font-size: 2.5rem;
 }
 
 #about p {
   font-size: 1.6rem;
-  line-height: 1.5;
+  line-height: 1.75;
   font-family: var(--secondary-font);
-  font-weight: 500;
+  font-weight: 700;
   text-align: justify;
 }
 
 .abtDiscord {
 display: flex;
+justify-self: center;
 width: fit-content;
 background-color: var(--tertiary);
 color: var(--secondary);
 padding: 0.5rem;
-margin-top: 1.5rem;
+margin-top: 2.5rem;
 border-radius: 0.5rem;
 font-family: var(--secondary-font);
 text-decoration: none;
@@ -57,4 +57,15 @@ color: var(--font-color);
 background-color: var(--tertiary);
 box-shadow: 0 0 25px 1px rgba(255, 255, 255, 0.5);
 border: 1px double rgba(255, 255, 255, 1);
+}
+
+@media (max-width: 480px) {
+  #about {
+    width: 100%;
+    margin: 0 auto;
+  }
+  #about p {
+    font-size: 1rem;
+    font-weight: 600;
+  }
 }
