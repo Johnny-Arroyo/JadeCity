@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import styles from './Contact.css'
+import { postAPIData } from '../../utils/fetchAPIData.js'
 
 const Contact = () => {
     // State to store form data
@@ -39,46 +40,28 @@ const Contact = () => {
             additionalInfo: formData.additionalInfo,
         }
 
-        // Send the form data
-        fetch('/api/email', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(formDataToSend),
+         // Send the form data using the new postAPIData function
+        postAPIData('email', formDataToSend)
+        .then((data) => {
+            setSuccessMessage('Thank you for your submission!');
+            setFormData({
+                firstName: '',
+                lastName: '',
+                emailAddress: '',
+                trackName: '',
+                artistName: '',
+                linkUpload: '',
+                additionalInfo: '',
+            });
         })
-            .then((response) => {
-                if (
-                    response.headers
-                        .get('content-type')
-                        ?.includes('application/json')
-                ) {
-                    return response.json()
-                }
-                return response.text()
-            })
-            .then((data) => {
-                setSuccessMessage('Thank you for your submission!')
-                setFormData({
-                    firstName: '',
-                    lastName: '',
-                    emailAddress: '',
-                    trackName: '',
-                    artistName: '',
-                    linkUpload: '',
-                    additionalInfo: '',
-                })
-            })
-            .catch((error) => {
-                console.error('Error:', error)
-                setSuccessMessage(
-                    'Failed to submit the form. Please try again.'
-                )
-            })
-            .finally(() => {
-                // Reset submitting state
-                setIsSubmitting(false)
-            })
+        .catch((error) => {
+            console.error('Error:', error);
+            setSuccessMessage('Failed to submit the form. Please try again.');
+        })
+        .finally(() => {
+            // Reset submitting state
+            setIsSubmitting(false);
+        });
     }
 
     return (

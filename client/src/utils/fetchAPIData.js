@@ -18,3 +18,26 @@ export const fetchAPIData = async (type) => {
       return [];
   }
 };
+
+// New function for POST requests
+export const postAPIData = async (type, body) => {
+    try {
+        const response = await fetch(`${process.env.REACT_APP_API_URL}/api/${type}`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(body),
+        });
+
+        if (!response.ok) {
+            throw new Error(`Error posting data: ${response.statusText}`);
+        }
+
+        const data = await response.json();
+        return data;
+    } catch (error) {
+        console.error('Error posting data:', error);
+        return { error: 'Failed to post data' };
+    }
+};
