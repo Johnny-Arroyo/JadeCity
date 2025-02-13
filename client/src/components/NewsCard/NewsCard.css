@@ -13,6 +13,7 @@
     justify-content: center;
     align-items: center;
     transition: 0.2s ease;
+    box-shadow: 0px 5px 15px 5px rgba(20, 36, 42, 0.4);
 }
 
 .news-list {
@@ -37,80 +38,143 @@
     border-radius: 8px;
     margin-top: auto;
 }
-
 /* Large News Card */
-
 #news-large {
-    padding: 8rem 1rem;
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
     margin: 0 auto;
-    max-width: 1200px;
+    max-width: 100%;
 }
 
 .news-card-large {
     width: 100%;
-    max-width: 1200px;
+    max-width: 1800px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    cursor: pointer; /* Clickable effect */
 }
 
-.news-img-large {
-    width: 55%;
-    margin: 40px;
-    border-radius: var(--comp-b-radius);
-    min-width: 250px;
-    box-shadow: 0px 5px 10px 5px rgba(0, 0, 0, 0.2);
+/* Grid Layout */
+.news-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* First column (title + image), Second column (text) */
+    grid-template-rows: auto 1fr; /* Two rows */
+    gap: 0 3rem;
+    width: 100%;
+    align-items: start; /* Align content at the top */
 }
 
+/* Title Styling */
 .news-title-large {
-    color: var(--secondary);
     font-size: 2.5rem;
     text-align: center;
-    /* text-shadow: 1px 1px 2px var(--font-color); */
+    grid-column: 1;
+    grid-row: 1;
+    padding: 1rem;
+    font-weight: bold;
 }
 
+/* Image Styling */
+.news-img-large {
+    width: 100%;
+    max-width: 100%;
+    grid-column: 1;
+    grid-row: 2;
+    box-shadow: 0px 5px 10px 5px rgba(0, 0, 0, 0.2);
+    border-radius: var(--comp-b-radius);
+}
+
+.news-img-large img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* Article Text */
 .news-paragraph-large {
-    color: var(--secondary);
-    font-family: var(--secondary-font);
-    width: 70%;
-    font-weight: 500;
-    text-align: start;
+    color: var(--font-color);
+    grid-column: 2;
+    grid-row: 1 / span 2; /* Starts in row 1, can expand into row 2 */
+    margin: 3rem 0 0 0;
+    padding: 1rem;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
     border-radius: var(--comp-b-radius);
     box-shadow: 0px 5px 10px 5px rgba(0, 0, 0, 0.2);
-    border: thick double rgba(121, 205, 204, 0.1);
-    padding: 30px;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    font-family: var(--secondary-font);
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 1.75;
+    text-align: justify;
+    align-self: start; /* Ensures the text starts at the top */
 }
 
-
-@media (max-width: 695px) {
-    .news-card {
-        margin: 0.25rem 1rem;
-    }
-    .news-img-large {
-        width: 80%;
-    }
-    .news-title-large {
-        font-size: 2rem;
+@media (max-width: 1199px) {
+    .news-grid {
+        gap: 0 2rem;
+        transition: ease-in-out 0.2s;
     }
     .news-paragraph-large {
-        font-size: 1rem;
-        width: 80%;
+        font-size: 1.4rem;
+    }
+}
+@media (max-width: 930px) {
+    .news-grid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0 1rem;
+        padding-top: 0rem;
+        transition: ease-in-out 0.2s;
+    }
+}
+@media (max-width: 675px) {
+    .news-grid {
+        gap: 0 1rem;
+        transition: ease-in-out 0.2s;
+    }
+    .news-title-large {
+        font-size: 2.2rem;
+        transition: ease-in-out 0.2s;
+    }
+    .news-paragraph-large {
+        margin-top: 2rem;
+        transition: ease-in-out 0.2s;
     }
 }
 
 @media (max-width: 480px) {
-    .news-img-large {
-        width: 90%;
+    .news-card {
+        margin-top: 0rem;
+        transition: ease-in-out 0.2s;
+    }
+    .news-grid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0 1rem;
+        transition: ease-in-out 0.2s;
+        padding-top: 0rem;
     }
     .news-title-large {
         font-size: 1.8rem;
+        margin-top: 0rem;
+        padding-bottom: 0.5rem;
+        transition: ease-in-out 0.2s;
     }
     .news-paragraph-large {
-        font-size: 0.9rem;
-        width: 90%;
+      margin-top: 1rem;
+      font-size: 1.2rem;
+      transition: ease-in-out 0.2s;
+  }
+    .news-img-large,
+    .news-paragraph-large,
+    .news-title-large {
+        width: 100%;
     }
 }

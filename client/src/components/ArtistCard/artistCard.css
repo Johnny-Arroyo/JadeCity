@@ -12,7 +12,7 @@
 }
 
 .artist-card + .artist-card {
-    margin-top: 0.25rem;
+    margin-top: 0.5rem;
 }
 
 .artist-card::after {
@@ -53,9 +53,9 @@
 }
 
 @media (max-width: 480px) {
-    .artist-card {
+    /* .artist-card {
         margin: 0.5rem 1rem;
-    }
+    } */
     .artist-card::after {
         background: rgba(0, 0, 0, 0);
         backdrop-filter: blur(0px);

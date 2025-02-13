@@ -1,77 +1,84 @@
 fieldset {
-    border: 1px var(--font-color);
-    padding: 0 0 1rem 0;
-    font-size: 1rem;
+  border: 1px var(--font-color);
+  padding: 0 0 1rem 0;
+  font-size: 1rem;
 }
 
 #contact {
-    margin: 5.5rem auto;
-    max-width: 1000px;
-    margin-bottom: 2rem;
+  margin: 0 auto;
+  max-width: 1000px;
+  margin-bottom: 2rem;
 }
 
 #contact h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
 }
 
 #contact .demoForm {
-    max-width: auto;
-    margin: 1rem 4rem;
-    padding: 0.5rem;
-    text-align: center;
-    font-family: var(--secondary-font);
-    font-weight: 500;
-    color: var(--font-color);
-    background: rgba(0, 0, 0, 0.2);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    border-radius: var(--comp-b-radius);
-    box-shadow: 0px 10px 15px 5px rgba(20, 36, 42, 0.4);
-    border: thick double rgba(121, 205, 204, 0.1);
+  max-width: auto;
+  margin: 1rem 4rem;
+  padding: 0.5rem;
+  text-align: center;
+  font-family: var(--secondary-font);
+  font-weight: 500;
+  color: var(--font-color);
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border-radius: var(--comp-b-radius);
+  box-shadow: 0px 10px 15px 5px rgba(20, 36, 42, 0.4);
+  border: 2px solid rgba(121, 205, 204, 0.1);
 }
 
 #contactHeading {
-    margin: 0;
-    padding: 0.5rem 0 1rem 0;
+  margin: 0;
+  padding: 0.5rem 0 1rem 0;
 }
 
 #contact p {
-    font-size: 1rem;
-    margin: 0;
-    padding: 0.5rem;
+  font-size: 1rem;
+  margin: 0;
+  padding: 0.5rem;
 }
 
 .submit {
-    background-color: var(--tertiary);
-    color: var(--secondary);
-    padding: 0.5rem;
-    margin: 1rem;
-    border-radius: 0.5rem;
-    font-family: var(--secondary-font);
-    text-decoration: none;
-    transition: 0.2s ease;
+display: flex;
+justify-self: center;
+width: fit-content;
+background-color: var(--tertiary);
+color: var(--secondary);
+padding: 0.5rem;
+margin: 1rem auto;
+border-radius: 0.5rem;
+font-family: var(--secondary-font);
+font-size: var(--font-size);
+text-decoration: none;
+transition: 0.2s ease;
+font-weight: bold;
+border: 1px double rgba(0, 0, 0, 0.5);
 }
 
 .submit:hover {
-    color: var(--font-color);
-    background-color: var(--hover-color);
-    box-shadow: 0 0 25px 1px rgba(255, 23, 228, 0.5);
+color: var(--font-color);
+background-color: var(--tertiary);
+box-shadow: 0 0 25px 1px rgba(255, 255, 255, 0.5);
+border: 1px double rgba(255, 255, 255, 1);
 }
 
 .additionalInfo {
-    display: flex;
-    flex-wrap: row wrap;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  flex-wrap: row wrap;
+  align-items: center;
+  justify-content: center;
 }
 
 @media (max-width: 480px) {
-    #contact {
-        padding: 0rem;
-        margin: 5.5rem 1.5rem;
-    }
-    #contact .demoForm {
-        margin: 1rem 1rem;
-    }
+  #contact {
+      padding: 0rem;
+      margin: 1.25rem 1.25rem;
+  }
+  #contact .demoForm {
+      margin: 1rem 1rem;
+  }
 }
