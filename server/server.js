@@ -8,16 +8,17 @@ const port = process.env.PORT || 3000
 
 // Enable CORS
 app.use(
-    cors({
-        origin: [
-            'http://localhost:3000',
-            'https://jadecityrecords.com',
-            'https://www.jadecityrecords.com',
-            'https://dev.dx16gcu62zx2e.amplifyapp.com',
-        ],
-        methods: ['GET', 'POST', 'PUT', 'DELETE'],
-        allowedHeaders: ['Content-Type', 'Authorization'],
-    })
+  cors({
+      origin: [
+          'http://localhost:3000',
+          'https://jadecityrecords.com',
+          'https://www.jadecityrecords.com',
+          'https://dev.dx16gcu62zx2e.amplifyapp.com',
+      ],
+      methods: ['GET', 'POST', 'PUT', 'DELETE'],
+      allowedHeaders: ['Content-Type', 'Authorization'],
+      credentials: true, // Allow cookies and credentials
+  })
 )
 // app.get('/', (req, res) => {
 //   res.send('Welcome to the Jade City Records API');
