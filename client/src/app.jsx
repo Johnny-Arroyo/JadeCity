@@ -31,6 +31,7 @@ const App = () => {
                     <div className="nav-bar">
                         <NavBar />
                     </div>
+                    <div className='logobg-shadow'></div>
                     <div className="content">
                         <Routes>
                             <Route
@@ -47,8 +48,10 @@ const App = () => {
                                         <div className="artistHome">
                                             <Artists />
                                         </div>
-                                        <div className='shopHome'><Shop /></div>
-                                        
+                                        <div className="shopHome">
+                                            <Shop />
+                                        </div>
+
                                         <div className="contactHome">
                                             <ContactForm />
                                         </div>

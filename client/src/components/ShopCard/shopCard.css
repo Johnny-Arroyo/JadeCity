@@ -35,12 +35,6 @@
     text-decoration: underline;
 }
 
-@media (max-width: 695px) {
-    .shop-card {
-        margin: 0.25rem 1rem;
-    }
-}
-
 .firefly-card {
     background-color: var(--secondary);
     border-radius: 10px;
@@ -80,4 +74,13 @@ h3.firefly-shop {
     cursor: pointer;
     color: var(--hover-color);
     text-decoration: underline;
+}
+
+@media (max-width: 695px) {
+    .shop-card {
+        margin: 0.25rem auto;
+    }
+    .firefly-card {
+        margin: 0.25rem auto;
+    }
 }
