@@ -1,4 +1,5 @@
 const path = require('path')
+const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const NodePolyfillPlugin = require('node-polyfill-webpack-plugin')
 const CopyPlugin = require('copy-webpack-plugin')
@@ -6,7 +7,7 @@ const CopyPlugin = require('copy-webpack-plugin')
 module.exports = {
     entry: './client/src/index.jsx', // Entry point of your React app
     output: {
-        path: path.resolve(__dirname, './client/dist'), // Output directory for the bundle
+        path: path.resolve(__dirname, 'client/dist'), // Output directory for the bundle
         filename: 'bundle.js',
         publicPath: '/',
     },
@@ -43,7 +44,7 @@ module.exports = {
     },
     devServer: {
         static: {
-            directory: path.join(__dirname, 'dist'), // Serve content from the dist folder
+            directory: path.join(__dirname, 'client/dist'), // Serve content from the dist folder
         },
         compress: true,
         port: 3000,
@@ -51,8 +52,11 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: './client/public/index.html', // Point to your HTML template
+            template: './client/Public/index.html', // Point to your HTML template
             filename: 'index.html',
+        }),
+        new webpack.DefinePlugin({
+          'process.env.REACT_APP_API_URL': JSON.stringify(process.env.REACT_APP_API_URL)
         }),
         new NodePolyfillPlugin(),
         new CopyPlugin({
@@ -60,7 +64,7 @@ module.exports = {
                 {
                     from: path.resolve(
                         __dirname,
-                        'client/public/img/FireflyLaser.jpg'
+                        'client/Public/img/FireflyLaser.jpg'
                     ),
                     to: 'static/images', // Output directory in `dist`
                 },

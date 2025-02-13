@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client'
 import App from './app'
 import './style.css'
 
-const root = ReactDOM.createRoot(document.getElementById('root')) // Create a root
+const root = ReactDOM.createRoot(document.getElementById('root')) // Create a root.
 
 root.render(
         <App />
