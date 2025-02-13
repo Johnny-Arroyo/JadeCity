@@ -27,7 +27,6 @@ export const postAPIData = async (type, body) => {
             headers: {
                 'Content-Type': 'application/json',
             },
-            credentials: 'include',
             body: JSON.stringify(body),
         });
 
