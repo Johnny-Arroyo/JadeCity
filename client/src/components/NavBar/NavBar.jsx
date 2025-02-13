@@ -176,14 +176,14 @@ const NavBar = () => {
                                         CONTACT
                                     </Link>
                                 </li>
-                                <a
-                                    href="https://open.spotify.com/playlist/6VVSzRxczOu431YRU941YD?si=1c97cf7f19ed4dde&nd=1&dlsi=4087f4d648d4414d"
-                                    target="_blank"
-                                    aria-label="Spotify"
-                                    className="nav-drawer-listen">
-                                    Listen on Spotify
-                                </a>
                             </ul>
+                            <a
+                                href="https://open.spotify.com/playlist/6VVSzRxczOu431YRU941YD?si=1c97cf7f19ed4dde&nd=1&dlsi=4087f4d648d4414d"
+                                target="_blank"
+                                aria-label="Spotify"
+                                className="nav-drawer-listen">
+                                Listen on Spotify
+                            </a>
                         </div>
                     </nav>
                     <a

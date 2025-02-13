@@ -1,6 +1,5 @@
 .nav-background {
     background-color: rgb(117, 201, 169);
-    backdrop-filter: blur(5px);
     position: fixed;
     width: 100%;
     height: 76px;
@@ -291,12 +290,12 @@ nav .jade-city-records {
     right: -300px; /* Positioned off-screen initially */
     width: 150px; /* Adjusted for better content fit */
     height: 100vh;
-    background: rgba(20, 36, 42, 0.4);
+    background: rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
     box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
-    border-left: thick double rgba(121, 205, 204, 0.1);
-    z-index: 10;
+    border-left: thick double rgba(255, 255, 255, 0.1);
+    z-index: 15;
     transition: right 0.3s ease;
     display: flex;
     flex-direction: column;
@@ -319,18 +318,14 @@ nav .jade-city-records {
 }
 
 .nav-drawer ul.nav-links li {
-    margin-bottom: 2rem; /* Space between nav links */
-}
-
-.nav-drawer ul.nav-links a {
-    text-decoration: none;
+    margin-bottom: 3rem; /* Space between nav links */text-decoration: none;
     /* color: var(--font-color); */
     font-size: 1.5rem;
     font-weight: bold;
     transition: color 0.2s ease;
 }
 
-.nav-drawer ul.nav-links a:hover {
+.nav-drawer ul.nav-links li:hover {
     color: var(--hover-color);
 }
 
@@ -339,18 +334,22 @@ nav .jade-city-records {
     background-color: var(--hover-color);
     color: var(--secondary);
     padding: 0.5rem;
+    margin-top: auto;
+    margin-bottom: 2rem;
     border-radius: 0.5rem;
     font-family: var(--secondary-font);
     text-decoration: none;
     transition: 0.2s ease;
+    font-size: 1rem;
     font-weight: bold;
+    text-align: center;
     border: 1px double rgba(0, 0, 0, 0.5);
 }
 .nav-drawer-listen:hover {
-    color: var(--font-color);
-    background-color: var(--hover-color);
-    box-shadow: 0 0 25px 1px rgba(255, 255, 255, 0.5);
-    border: 1px double rgba(255, 255, 255, 1);
+  color: var(--font-color);
+  background-color: var(--hover-color);
+  box-shadow: 0 0 25px 1px rgba(255, 255, 255, 0.5);
+  border: 1px double rgba(255, 255, 255, 1);
 }
 
 /* Responsive Adjustments */

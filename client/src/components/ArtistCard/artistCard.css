@@ -12,7 +12,7 @@
 }
 
 .artist-card + .artist-card {
-    margin-top: 0.25rem;
+    margin-top: 0.5rem;
 }
 
 .artist-card::after {
