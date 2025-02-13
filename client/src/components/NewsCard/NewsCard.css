@@ -97,8 +97,8 @@
 .news-paragraph-large {
     color: var(--font-color);
     grid-column: 2;
-    grid-row: 1 / span 2; /* Starts in row 1, can expand into row 2 */
-    margin: 3rem 0 0 0;
+    grid-row: 2 / span 2; /* Starts in row 1, can expand into row 2 */
+    margin: 0;
     padding: 1rem;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(5px);
@@ -131,6 +131,10 @@
         gap: 0 1rem;
         padding-top: 0rem;
         transition: ease-in-out 0.2s;
+    }
+    .news-paragraph-large {
+      margin-top: 2rem;
+      transition: ease-in-out 0.2s;
     }
 }
 @media (max-width: 675px) {
