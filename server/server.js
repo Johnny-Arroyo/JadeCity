@@ -13,6 +13,7 @@ app.use(
             'http://localhost:3000',
             'https://jadecityrecords.com',
             'https://www.jadecityrecords.com',
+            'https://dev.dx16gcu62zx2e.amplifyapp.com',
         ],
         methods: ['GET', 'POST', 'PUT', 'DELETE'],
         allowedHeaders: ['Content-Type', 'Authorization'],
