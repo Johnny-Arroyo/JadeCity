@@ -14,7 +14,7 @@
     margin: 0 auto;
     padding: 1rem 2rem 2rem 2rem;
     height: auto;
-    width: auto;
+    width: 100%;
     /* background: rgba(255, 255, 255, 0.01);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
@@ -192,5 +192,29 @@
         margin: 0;
         font-weight: 600;
         font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 340px) {
+    #hero .welcome {
+        font-size: 1rem;
+        margin: 0;
+    }
+    #hero .records {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        font-size: 2rem;
+        white-space: nowrap;
+    }
+
+    #hero .tagline {
+        display: flex;
+        text-align: justify;
+        padding: 0 0 .25rem 0;
+        margin: 0;
+        font-weight: 600;
+        font-size: 1rem;
     }
 }

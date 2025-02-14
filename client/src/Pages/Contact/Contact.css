@@ -66,11 +66,12 @@ box-shadow: 0 0 25px 1px rgba(255, 255, 255, 0.5);
 border: 1px double rgba(255, 255, 255, 1);
 }
 
-.additionalInfo {
+#textarea.additionalInfo {
   display: flex;
   flex-wrap: row wrap;
   align-items: center;
   justify-content: center;
+  margin: .25rem;
 }
 
 @media (max-width: 480px) {
