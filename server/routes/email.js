@@ -45,7 +45,7 @@ router.post('/', (req, res) => {
             return res.status(500).json({ message: error.toString() })
         }
 
-        res.send('Email sent: ' + info.response)
+        res.json('Email sent: ' + info.response)
     })
 })
 
