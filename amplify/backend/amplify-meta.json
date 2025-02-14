@@ -1,5 +1,5 @@
 {
-  "dev": {
+  "providers": {
     "awscloudformation": {
       "AuthRoleName": "amplify-jadecityrecords-dev-843e6-authRole",
       "UnauthRoleArn": "arn:aws:iam::724772075233:role/amplify-jadecityrecords-dev-843e6-unauthRole",
@@ -10,14 +10,13 @@
       "StackName": "amplify-jadecityrecords-dev-843e6",
       "StackId": "arn:aws:cloudformation:us-east-1:724772075233:stack/amplify-jadecityrecords-dev-843e6/7f8efc90-d7be-11ef-b9dd-0affed17c77f",
       "AmplifyAppId": "dgkykn9q0lxrs"
-    },
-    "categories": {
-      "hosting": {
-        "amplifyhosting": {
-          "appId": "dgkykn9q0lxrs",
-          "type": "cicd"
-        }
-      }
+    }
+  },
+  "hosting": {
+    "amplifyhosting": {
+      "service": "amplifyhosting",
+      "type": "cicd",
+      "lastPushTimeStamp": "2025-01-21T08:05:59.204Z"
     }
   }
 }

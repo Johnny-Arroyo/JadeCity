@@ -13,11 +13,15 @@ app.use(
             'http://localhost:3000',
             'https://jadecityrecords.com',
             'https://www.jadecityrecords.com',
+            'https://dev.dx16gcu62zx2e.amplifyapp.com',
         ],
         methods: ['GET', 'POST', 'PUT', 'DELETE'],
         allowedHeaders: ['Content-Type', 'Authorization'],
     })
 )
+// app.get('/', (req, res) => {
+//   res.send('Welcome to the Jade City Records API');
+// });
 
 // Serve API routes
 const emailRoute = require('./routes/email')
@@ -36,10 +40,10 @@ app.use('/api/shop', shopRoutes)
 app.use(express.static(path.join(__dirname, '../client/dist')))
 
 app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, '../client/dist/index.html'))
+    res.sendFile(path.join(__dirname, '../client/dist', 'index.html'))
 })
 
 // Start Server
-app.listen(port, () => {
+app.listen(port, '0.0.0.0', () => {
     console.log(`😎 Server is running on http://localhost:${port} 😎`)
 })

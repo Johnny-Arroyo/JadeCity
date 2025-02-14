@@ -3,10 +3,11 @@ const nodemailer = require('nodemailer')
 const router = express.Router()
 require('dotenv').config()
 
-router.use(express.urlencoded({ extended: true }));
-router.use(express.json());
+router.use(express.urlencoded({ extended: true }))
+router.use(express.json())
 
 router.post('/', (req, res) => {
+    console.log('Incoming request body:', req.body)
     const {
         firstName,
         lastName,
@@ -36,7 +37,7 @@ router.post('/', (req, res) => {
           Artist Name: ${artistName}
           Additional Info: ${additionalInfo}
           
-          You can listen to the track here: ${linkUpload}`
+          You can listen to the track here: ${linkUpload}`,
     }
 
     transporter.sendMail(mailOptions, (error, info) => {
@@ -44,7 +45,7 @@ router.post('/', (req, res) => {
             return res.status(500).json({ message: error.toString() })
         }
 
-        res.send('Email sent: ' + info.response)
+        res.json('Email sent: ' + info.response)
     })
 })
 

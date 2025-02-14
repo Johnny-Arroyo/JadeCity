@@ -84,7 +84,7 @@ const Shop = () => {
     return (
         <section id="shop">
             <h2>Shop</h2>
-            <h3>Jade City Merch</h3>
+            {/* <h3>Jade City Merch</h3> */}
             <div className="shop-list">
                 {products.map((product) => (
                     <ShopCard
@@ -96,7 +96,7 @@ const Shop = () => {
                     />
                 ))}
             </div>
-            <h3 className="firefly-shop">Firefly Laser Shop</h3>
+            {/* <h3 className="firefly-shop">Firefly Laser Shop</h3> */}
             <div>
               <FireflyCard/>
             </div>

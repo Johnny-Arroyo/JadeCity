@@ -33,10 +33,7 @@ const News = () => {
     return (
         <section id="news">
             <h2>News</h2>
-            <p className="newsMsg">
-                Stay tuned for the latest updates and news from Jade
-                City Records!
-            </p>
+            
             <div className="news-list-page">
                 {data.map((news, index) => (
                     <NewsCard
@@ -47,6 +44,10 @@ const News = () => {
                     />
                 ))}
             </div>
+            <p className="newsMsg">
+                Stay tuned for the latest updates and news from Jade
+                City Records!
+            </p>
         </section>
     )
 }
