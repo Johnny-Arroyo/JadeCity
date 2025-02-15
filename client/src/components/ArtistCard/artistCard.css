@@ -1,103 +1,31 @@
-/*Before Safari Comp
-
 .artist-card {
-    break-inside: avoid;
-    aspect-ratio: 4/3;
-    max-width: 350px;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(5px);
-    border-radius: var(--comp-b-radius);
-    box-shadow: 0px 5px 5px 5px rgba(20, 36, 42, 0.4);
-    border: 1px solid rgba(121, 205, 204, 0.1);
-    align-items: center;
-    justify-content: center;
-}
-
-.artist-card + .artist-card {
-    margin-top: 0.5rem;
-}
-
-.artist-card:hover {
-    box-shadow: 0 0 25px 1px rgba(255, 255, 255, 0.5);
-    border: 2px solid rgba(255, 255, 255, 1);
-} 
-
-//removed - added work aorund for Safari comp//
-.artist-card::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.15);
-    backdrop-filter: blur(0.5px);
-    -webkit-backdrop-filter: blur(0.5px);
-    border-radius: var(--comp-b-radius);
-    z-index: 1;
-    transition: 0.3s ease, 0.3s ease;
-}
-
-.artist-card:hover::after {
-    backdrop-filter: blur(0px);
-    -webkit-backdrop-filter: blur(0px);
-    background: rgba(255, 255, 255, 0);
-}
-
-*/
-
-.artist-card {
-  break-inside: avoid;
-  page-break-inside: avoid; /* Safari fix */
-  aspect-ratio: 4/3;
+  margin:.5rem;
+  height: fit-content;
   max-width: 350px;
   background: rgba(255, 255, 255, 0.1);
   -webkit-backdrop-filter: blur(5px); /* Safari fix */
   backdrop-filter: blur(5px);
   border-radius: var(--comp-b-radius);
   box-shadow: 0px 5px 5px 5px rgba(20, 36, 42, 0.4);
-  border: 1px solid rgba(121, 205, 204, 0.1);
+  border: 2px solid rgba(0, 0, 0, 0.1);
   align-items: center;
   justify-content: center;
 }
 
-@supports not (aspect-ratio: 4/3) {
-  .artist-card {
-      position: relative;
-      width: 100%;
-      padding-top: 75%; /* Fallback for Safari */
-  }
-}
-
-.artist-card + .artist-card {
-  margin-top: 0.5rem;
-}
-
 .artist-card:hover {
-  box-shadow: 0 0 25px 3px rgba(255, 255, 255, 0.7), 0 0 10px 2px rgba(255, 255, 255, 0.5);
+  box-shadow: 0px 5px 5px 5px rgba(255, 255, 255, 0.4);
   border: 2px solid rgba(255, 255, 255, 1);
+}
+
+.artist-card .name {
+    margin: 1rem 0;
 }
 
 .artist-card img {
     display: block;
     width: 100%;
-    /* height: auto */
     margin-bottom: 0;
     padding: 0;
     border-top-left-radius: var(--comp-b-radius);
     border-top-right-radius: var(--comp-b-radius);
 }
-
-.artist-card .name {
-    padding: 0.25rem;
-}
-
-/* @media (max-width: 480px) {
-    .artist-card::after {
-        background: rgba(0, 0, 0, 0);
-        backdrop-filter: blur(0px);
-        -webkit-backdrop-filter: blur(0px);
-    }
-} */
