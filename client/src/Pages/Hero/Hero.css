@@ -1,8 +1,8 @@
 #hero {
     display: flex;
-    justify-content: flex-start;
     flex-wrap: wrap;
-    align-items: center;
+    justify-content: left;
+    align-content: center;
     max-width: 1200px;
     margin: 0 auto;
     margin-bottom: 3rem;
@@ -11,24 +11,16 @@
 }
 
 #hero .heroContainer {
-    justify-content: center;
-    align-items: start;
     margin: 0 auto;
     padding: 1rem 2rem 2rem 2rem;
-    height: auto;
-    width: fit-content;
-    /* background: rgba(255, 255, 255, 0.01);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-  border-radius: var(--comp-b-radius);
-  box-shadow: 0px 50px 100px 1px rgba(20, 36, 42, 0.2);
-  border: thick double rgba(121, 205, 204, 0.1); */
+    height: fit-content;
+    width: auto;
 }
 
 #hero .tagline {
     display: flex;
     justify-content: flex-start;
-    padding-top: 2rem;
+    padding-top: 1rem;
     margin-right: auto;
     margin-bottom: 1rem;
     font-size: 2rem;
@@ -40,7 +32,7 @@
     font-size: 1.5rem;
     padding: 0;
     font-weight: 600;
-    margin: 1rem 0 0 0;
+    margin: 0;
 }
 
 #hero .records {
@@ -94,129 +86,136 @@
 }
 
 @media (max-width: 514px) {
-    #hero {
-        margin: 1.25rem 0 1rem 0;
-    }
-
-    #hero .heroContainer {
-        padding: 1rem;
-        margin: 0 auto;
-    }
-
-    #hero .welcome {
-        font-size: 1.2rem;
-        margin: 0;
-    }
-    #hero .records {
-        text-align: center;
-        height: fit-content;
-        max-width: 100vw;
-        font-size: 2.3rem;
-    }
-
-    #hero .tagline {
-        display: flex;
-        text-align: justify;
-        padding: 0 0 1rem 0;
-        margin: 0;
-        font-weight: 600;
-        font-size: 1.2rem;
-    }
-
-    .listen {
-        display: flex;
-        flex-wrap: wrap;
-        justify-self: center;
-        justify-content: center;
-        background-color: var(--hover-color);
-        color: var(--secondary);
-        width: 180px;
-        padding: 0.5rem;
-        margin: 0.75rem;
-        border-radius: 0.5rem;
-        font-family: var(--secondary-font);
-        text-decoration: none;
-        transition: 0.2s ease;
-        font-weight: bold;
-        font-size: 1rem;
-        border: 2px solid rgba(0, 0, 0, 0.5);
-    }
-    .listen:hover {
-        color: var(--font-color);
-        background-color: var(--hover-color);
-        box-shadow: 0 0 25px 1px rgba(255, 255, 255, 0.5);
-        border: 2px solid rgba(255, 255, 255, 1);
-    }
-
-    .demo {
-        display: flex;
-        flex-wrap: wrap;
-        justify-self: center;
-        justify-content: center;
-        background-color: var(--tertiary);
-        color: var(--secondary);
-        width: 180px;
-        padding: 0.5rem;
-        border-radius: 0.5rem;
-        font-family: var(--secondary-font);
-        text-decoration: none;
-        transition: 0.2s ease;
-        font-weight: bold;
-        font-size: 1rem;
-        border: 2px solid rgba(0, 0, 0, 0.6);
-    }
-    .demo:hover {
-        color: var(--font-color);
-        background-color: var(--tertiary);
-        box-shadow: 0 0 25px 1px rgba(255, 255, 255, 0.5);
-        border: 2px solid rgba(255, 255, 255, 1);
-    }
+  #hero {
+    margin: 1.25rem 0 1rem 0;
+  }
+  
+  #hero .heroContainer {
+    padding: 1rem;
+    margin: 0 auto;
+  }
+  
+  #hero .welcome {
+    font-size: 1.2rem;
+    margin: 0;
+  }
+  #hero .records {
+    text-align: center;
+    height: fit-content;
+    max-width: 100vw;
+    font-size: 2.3rem;
+  }
+  
+  #hero .tagline {
+    display: flex;
+    text-align: justify;
+    padding: 0 0 1rem 0;
+    margin: 0;
+    font-weight: 600;
+    font-size: 1.2rem;
+  }
+  
+  .listen {
+    display: flex;
+    flex-wrap: wrap;
+    justify-self: center;
+    justify-content: center;
+    background-color: var(--hover-color);
+    color: var(--secondary);
+    width: 180px;
+    padding: 0.5rem;
+    margin: 0.75rem;
+    border-radius: 0.5rem;
+    font-family: var(--secondary-font);
+    text-decoration: none;
+    transition: 0.2s ease;
+    font-weight: bold;
+    font-size: 1rem;
+    border: 2px solid rgba(0, 0, 0, 0.5);
+  }
+  .listen:hover {
+    color: var(--font-color);
+    background-color: var(--hover-color);
+    box-shadow: 0 0 25px 1px rgba(255, 255, 255, 0.5);
+    border: 2px solid rgba(255, 255, 255, 1);
+  }
+  
+  .demo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-self: center;
+    justify-content: center;
+    background-color: var(--tertiary);
+    color: var(--secondary);
+    width: 180px;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    font-family: var(--secondary-font);
+    text-decoration: none;
+    transition: 0.2s ease;
+    font-weight: bold;
+    font-size: 1rem;
+    border: 2px solid rgba(0, 0, 0, 0.6);
+  }
+  .demo:hover {
+    color: var(--font-color);
+    background-color: var(--tertiary);
+    box-shadow: 0 0 25px 1px rgba(255, 255, 255, 0.5);
+    border: 2px solid rgba(255, 255, 255, 1);
+  }
 }
 
 @media (max-width: 480px) {
-    #hero .welcome {
-        font-size: 1.2rem;
-        margin: 0;
-    }
-    #hero .records {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        font-size: auto;
-        white-space: nowrap;
-    }
-
-    #hero .tagline {
-        display: flex;
-        text-align: justify;
-        padding: 0 0 1rem 0;
-        margin: 0;
-        font-weight: 600;
-        font-size: 1.2rem;
-    }
+  #hero .welcome {
+    font-size: 1.2rem;
+    margin: 0;
+  }
+  #hero .records {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    font-size: auto;
+    white-space: nowrap;
+  }
+  
+  #hero .tagline {
+    display: flex;
+    text-align: justify;
+    padding: 0 0 1rem 0;
+    margin: 0;
+    font-weight: 600;
+    font-size: 1.2rem;
+  }
+}
+@media (max-width: 370px) {
+  #hero .welcome {
+    font-size: 1rem;
+    margin: 0;
+  }
+  #hero .records {
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    width: 100%;
+    font-size: 1.8rem;
+    white-space: nowrap;
+  }
+  
+  #hero .tagline {
+    display: flex;
+    text-align: justify;
+    padding: 0 0 0.25rem 0;
+    margin: 0;
+    font-weight: 600;
+    font-size: 1rem;
+  }
 }
 
-@media (max-width: 340px) {
-    #hero .welcome {
-        font-size: 1rem;
-        margin: 0;
-    }
-    #hero .records {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+/* @media (max-width: 370px) {
+    #hero .container {
         width: 100%;
-        font-size: 2rem;
-        white-space: nowrap;
-    }
-
-    #hero .tagline {
-        display: flex;
-        text-align: justify;
-        padding: 0 0 0.25rem 0;
+        padding: 0;
         margin: 0;
-        font-weight: 600;
-        font-size: 1rem;
     }
-}
+  } */
