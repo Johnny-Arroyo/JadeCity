@@ -16,7 +16,7 @@ function ArtistCardLarge() {
             <div className="artist-info-large">
                 <h3>{name}</h3>
                 <p className="bio">{bio}</p>
-                <p>Inspiration: {inspiration}</p>
+                {/* <p>Inspiration: {inspiration}</p> */}
             </div>
             <div className="spotify">
                 <iframe
