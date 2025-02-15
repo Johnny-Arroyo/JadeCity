@@ -2,10 +2,16 @@
     display: flex;
     flex-direction: column;
     justify-items: center;
-    max-width: 1130px;
+    max-width: 1400px;
     margin: 0 auto;
     margin-bottom: 2rem;
     padding: 0 2rem;
+}
+
+.artist-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 #artists h2 {
@@ -17,24 +23,9 @@
     color: var(--font-color);
 }
 
-@media (min-width: 904px) {
-    .artist-list {
-        column-width: 14rem;
-        column-count: 3;
-        gap: 0.25rem;
-        counter-reset: grid;
-    }
-}
-
 @media (max-width: 1012px) {
     #artists {
         max-width: 700px;
-    }
-    .artist-list {
-        column-width: 14rem;
-        column-count: 2;
-        gap: 0.5rem;
-        counter-reset: grid;
     }
 }
 
@@ -43,16 +34,10 @@
         max-width: 348px;
         padding: 0 1rem;
     }
-    .artist-list {
-        column-width: 14rem;
-        column-count: 1;
-        gap: 0.5rem;
-        counter-reset: grid;
-    }
 }
 
 @media (max-width: 480px) {
-  #artists {
-    margin-top: 1.25rem;
-  }
+    #artists {
+        margin-top: 1.25rem;
+    }
 }

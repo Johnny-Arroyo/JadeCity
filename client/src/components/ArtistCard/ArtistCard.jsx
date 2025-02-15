@@ -11,19 +11,6 @@ import { useNavigate } from 'react-router-dom'
 const ArtistCard = ({ name, bio, img, inspiration, spotify }) => {
     const navigate = useNavigate()
 
-    // const imgUrl = img
-    //     .replace(
-    //         'https://drive.google.com/file/d/',
-    //         'https://drive.google.com/thumbnail?id='
-    //     )
-    //     .replace(/\/view.*/, '')
-
-    // const cld = new Cloudinary({ cloud: { cloudName: 'cloud-name' } }); // add cloud name
-    // const img = cld
-    //     .image('dimatis-photo') // needs photo's public ID
-    //     .format('auto') 
-    //     .quality('auto')
-
     const spotifyUrl = spotify
         .replace('artist', 'embed/artist')
         .replace(/\?.*/, '?utm_source=generator')
