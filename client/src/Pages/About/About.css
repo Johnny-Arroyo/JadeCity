@@ -94,9 +94,9 @@
 }
 @media (max-width: 375px) {
     #about .aboutContainer {
-      margin: 0 .25rem;
-      padding: .5rem 1rem;
-      transition: ease-in-out 0.5s;
+        margin: 0 0.25rem;
+        padding: 0.5rem 1rem;
+        transition: ease-in-out 0.5s;
     }
     #about h2 {
         margin: 1rem 0 2rem 0;
@@ -111,12 +111,13 @@
         transition: ease-in-out 0.5s;
     }
     #about p {
-        font-size: .8rem;
+        font-size: 0.8rem;
         font-weight: 600;
         transition: ease-in-out 0.5s;
     }
     .abtDiscord {
-      margin: .25rem;
-      transition: ease-in-out 0.5s;
+        margin: 0.25rem;
+        font-size: 1rem;
+        transition: ease-in-out 0.5s;
     }
 }
