@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     justify-items: center;
-    max-width: 1250px;
+    max-width: 1130px;
     margin: 0 auto;
     margin-bottom: 2rem;
     padding: 0 2rem;
@@ -20,8 +20,8 @@
 @media (min-width: 904px) {
     .artist-list {
         column-width: 14rem;
-        column-count: 4;
-        gap: 0.5rem;
+        column-count: 3;
+        gap: 0.25rem;
         counter-reset: grid;
     }
 }
