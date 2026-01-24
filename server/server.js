@@ -19,9 +19,6 @@ app.use(
         allowedHeaders: ['Content-Type', 'Authorization'],
     })
 )
-// app.get('/', (req, res) => {
-//   res.send('Welcome to the Jade City Records API');
-// });
 
 // Serve API routes
 const emailRoute = require('./routes/email')
